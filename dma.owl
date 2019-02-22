@@ -1,0 +1,2319 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/media/dma#"
+     xml:base="https://w3id.org/media/dma"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dma="https://w3id.org/media/dma#"
+     xmlns:edm="http://www.europeana.eu/schemas/edm#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:schema="https://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:rdvocab="http://rdvocab.info/ElementsGr2/"
+     xmlns:ontology="http://dbpedia.org/ontology/"
+     xmlns:property="http://dbpedia.org/property/"
+     xmlns:ONTOLegolang_UAge="https://w3id.org/nlp/ONTOLegolang_UAge#">
+    <owl:Ontology rdf:about="https://w3id.org/media/dma">
+        <owl:versionIRI rdf:resource="https://w3id.org/media/dma/1.0"/>
+        <property:contactInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gplsi.dlsi.ua.es</property:contactInfo>
+        <property:contactInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ygutierrez[at]dlsi.ua.es, dtomas[at]dlsi.ua.es, imoreno[at]dlsi.ua.es, ameny[at]mail.ntua.gr, alps[at]mail.ntua.gr</property:contactInfo>
+        <property:copyright rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © 2016 by Information Systems and Language Processing Workgroup
+All rights reserved.</property:copyright>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01 T10:00:00+1:00</dc:date>
+        <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01 T10:00:00+1:00</dcterms:dateCopyrighted>
+        <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 Unported License</dcterms:license>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology aims to provide a web semantic standard for representing Digital Media Assets or simply Assets. Digital Media Assets covered by this ontology ranges from Product Assets (like Album, Movie and Book) to the representation of Person and Organisation Assets. It allows to link those products with real contributors and/or enterprises.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Media Asset</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+        <ONTOLegolang_UAge:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</ONTOLegolang_UAge:numberOfClasses>
+        <ONTOLegolang_UAge:numberOfDataProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</ONTOLegolang_UAge:numberOfDataProperties>
+        <ONTOLegolang_UAge:numberOfObjectProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</ONTOLegolang_UAge:numberOfObjectProperties>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/ontology/abstract"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/role -->
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/ontology/role">
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Profession"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://dbpedia.org/property/contactInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/property/contactInfo"/>
+    
+
+
+    <!-- http://dbpedia.org/property/copyright -->
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/property/copyright"/>
+    
+
+
+    <!-- http://dbpedia.org/property/example -->
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/property/example"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateCopyrighted -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateCopyrighted"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#annotatedSource -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#annotatedSource">
+        <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/role"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#annotatedTarget -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#annotatedTarget">
+        <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/role"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Asset"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/nlp/ONTOLegolang_UAge#numberOfClasses -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/nlp/ONTOLegolang_UAge#numberOfClasses"/>
+    
+
+
+    <!-- https://w3id.org/nlp/ONTOLegolang_UAge#numberOfDataProperties -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/nlp/ONTOLegolang_UAge#numberOfDataProperties"/>
+    
+
+
+    <!-- https://w3id.org/nlp/ONTOLegolang_UAge#numberOfObjectProperties -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/nlp/ONTOLegolang_UAge#numberOfObjectProperties"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/basedOn -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/basedOn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:label>basedOn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://dbpedia.org/property/adaptation -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/property/adaptation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:label>adaptation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:comment xml:lang="en">An owner responsible for making the digital asset.</rdfs:comment>
+        <rdfs:label>creator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Language"/>
+        <rdfs:label>language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdvocab.info/ElementsGr2/gender -->
+
+    <owl:ObjectProperty rdf:about="http://rdvocab.info/ElementsGr2/gender">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Gender"/>
+        <rdfs:label>gender</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdvocab.info/ElementsGr2/professionOrOccupation -->
+
+    <owl:ObjectProperty rdf:about="http://rdvocab.info/ElementsGr2/professionOrOccupation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdfs:label>professionOrOccupation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/address -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/address">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:label>address</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/addressCountry -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/addressCountry">
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/address"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://schema.org/Country"/>
+        <rdfs:label>addressCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/affiliation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization"/>
+        <rdfs:label>affiliation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/author -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/author">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+        <rdfs:label>author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/birthPlace -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/birthPlace">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="https://schema.org/Place"/>
+        <rdfs:label>birthPlace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/contentRating -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/contentRating">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#ContentRating"/>
+        <property:example xml:lang="en">For example,&apos;MPAA PG-13&apos;</property:example>
+        <rdfs:comment xml:lang="en">Official rating of a piece of content</rdfs:comment>
+        <rdfs:label>contentRating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/contributor -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/contributor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+        <rdfs:label>contributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/deathPlace -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/deathPlace">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="https://schema.org/Place"/>
+        <rdfs:label>deathPlace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/encodingFormat -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/encodingFormat">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#EncodingFormat"/>
+        <rdfs:label>encodingFormat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/genre -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/genre">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Genre"/>
+        <rdfs:label>genre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/license -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/license">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#License"/>
+        <rdfs:label>license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/nationality -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/nationality">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="https://schema.org/Country"/>
+        <rdfs:label>nationality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/publisher -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/publisher">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization"/>
+        <rdfs:label>publisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/sameAs -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/sameAs">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:label>sameAs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/status -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/status">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Status"/>
+        <rdfs:label>status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/subtitleLanguage -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/subtitleLanguage">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Language"/>
+        <rdfs:label>subtitleLanguage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/track -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/track">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:range rdf:resource="https://schema.org/MusicRecording"/>
+        <rdfs:label>track</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/trailer -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/trailer">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:range rdf:resource="https://schema.org/Movie"/>
+        <rdfs:label>trailer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#assetObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#assetObjectProperty">
+        <rdfs:comment xml:lang="en">It defines generic object properties regarding Digital Media Assets</rdfs:comment>
+        <rdfs:label>assetObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#bookObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#bookObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productObjectProperty"/>
+        <rdfs:comment xml:lang="en">It refers to object properties related to digital books.</rdfs:comment>
+        <rdfs:label>bookObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#extension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#extension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:comment xml:lang="en">This describes specific object property extensions for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM platform (http://samproject.net).</rdfs:comment>
+        <rdfs:label>extension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#gameObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#gameObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productObjectProperty"/>
+        <rdfs:comment xml:lang="en">It refers to object properties related to video games.</rdfs:comment>
+        <rdfs:label>gameObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#genericExtension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#genericExtension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#extension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#GenericExtension"/>
+        <rdfs:comment xml:lang="en">This refers to an object property able to represent generic elements of an Asset.</rdfs:comment>
+        <rdfs:label>genericExtension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#linkingExtension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#linkingExtension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#extension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <property:example xml:lang="en">For example for setting the precise moment in which an Asset is referred when a movie is being watched by users.</property:example>
+        <rdfs:comment xml:lang="en">This refers to an object property able to represent elements of an Asset that are linked along a time line.</rdfs:comment>
+        <rdfs:label>linkingExtension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#movieObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#movieObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productObjectProperty"/>
+        <rdfs:comment xml:lang="en">It refers to object properties related to movies/films/videos.</rdfs:comment>
+        <rdfs:label>movieObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#musicObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#musicObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productObjectProperty"/>
+        <rdfs:comment xml:lang="en">It refers to object properties related to music albums.</rdfs:comment>
+        <rdfs:label>musicObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#nomenclatureObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#nomenclatureObjectProperty">
+        <rdfs:comment xml:lang="en">It defines nomenclature object properties regarding Digital Media Assets</rdfs:comment>
+        <rdfs:label>nomenclatureObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#owner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#owner">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtension"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+        <property:example xml:lang="en">e.g. a person or an organisation</property:example>
+        <rdfs:comment xml:lang="en">This refers to the Asset&apos;s owner.</rdfs:comment>
+        <rdfs:label>owner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#ownerExtension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#ownerExtension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#extension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#OwnerExtension"/>
+        <rdfs:comment xml:lang="en">This refers to an object property able to represent elements of an Asset that set  generic information about Asset&apos;s owner.</rdfs:comment>
+        <rdfs:label>ownerExtension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#personObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#personObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">This refers to object properties about persons.</rdfs:comment>
+        <rdfs:label>personObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#productObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#productObjectProperty">
+        <rdfs:comment xml:lang="en">It refers to object properties related to digital products.</rdfs:comment>
+        <rdfs:label>productObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#pubCountry -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#pubCountry">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="https://schema.org/Country"/>
+        <property:example xml:lang="en">This refers to the publication country of a Product Asset</property:example>
+        <rdfs:label>pubCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#recording -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#recording">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#trackOp"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicRecording"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:comment xml:lang="en">It refers to the music album to which a track belongs.</rdfs:comment>
+        <rdfs:label>recording</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#relatedAsset -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#relatedAsset">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#semanticExtension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SemanticExtension"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:comment xml:lang="en">It refers to a set of assets that are related in any aspect to the current asset</rdfs:comment>
+        <rdfs:label>relatedAsset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#semanticExtension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#semanticExtension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#extension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#SemanticExtension"/>
+        <property:example xml:lang="en">This refers to information about the semantic annotation and characterization of assets.</property:example>
+        <rdfs:label>semanticExtension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#socialMediaExtension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#socialMediaExtension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#extension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#SocialMediaExtension"/>
+        <rdfs:comment xml:lang="en">This refers to social media aspects of an asset such as the related Facebook pages or Twitter accounts.</rdfs:comment>
+        <rdfs:label>socialMediaExtension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#sourceType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#sourceType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#socialMediaExtension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SocialMediaExtension"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#SourceType"/>
+        <rdfs:comment>It refers to the type of source usually used to differentiate digital sources.</rdfs:comment>
+        <rdfs:label>sourceType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#syndicationExtension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#syndicationExtension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#extension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#SyndicationExtension"/>
+        <rdfs:comment xml:lang="en">This refers to processes related to the syndication of assets and their presentation to end users.</rdfs:comment>
+        <rdfs:label>syndicationExtension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#theme -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#theme">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtension"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#syndicationExtension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SyndicationExtension"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Theme"/>
+        <rdfs:comment xml:lang="en">It refers to the visualisation theme of an Asset inside a production/exploitation system.  Its aim is associating specific visualisation styles when an Asset is being visualised in a widget inside a platform.</rdfs:comment>
+        <rdfs:label>theme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#trackOp -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#trackOp">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
+        <rdfs:comment xml:lang="en">It refers to object properties related to music recordings , i.e. tracks.</rdfs:comment>
+        <rdfs:label>trackOp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#voiceControlExtension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#voiceControlExtension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#extension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#VoiceControlExtension"/>
+        <rdfs:comment xml:lang="en">This  refers  to information and grammar for personalized control of the devices that present the particular assets.</rdfs:comment>
+        <rdfs:label>voiceControlExtension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#widget -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#widget">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtension"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#syndicationExtension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SyndicationExtension"/>
+        <rdfs:range rdf:resource="https://w3id.org/media/dma#Widget"/>
+        <rdfs:comment xml:lang="en">It refers to the visualisation widget for Assets inside a production/exploitation system.</rdfs:comment>
+        <rdfs:label>widget</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#socialMediaExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <owl:equivalentProperty rdf:resource="https://schema.org/title"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#externalTerms"/>
+        <rdfs:label>title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
+        <owl:equivalentProperty rdf:resource="https://schema.org/datePublished"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label>issued</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance#price -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/provenance#price">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance#targetTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/provenance#targetTitle">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>targetTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance#targetType -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/provenance#targetType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>targetType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdvocab.info/ElementsGr2/dateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://rdvocab.info/ElementsGr2/dateOfBirth">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label>dateOfBirth</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdvocab.info/ElementsGr2/dateOfDeath -->
+
+    <owl:DatatypeProperty rdf:about="http://rdvocab.info/ElementsGr2/dateOfDeath">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label>dateOfDeath</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/addressLocality -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/addressLocality">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>addressLocality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/alternateName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/alternateName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>alternateName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/awards -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/awards">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>awards</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/bookEdition -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/bookEdition">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/media/dma#edition"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#externalTerms"/>
+        <rdfs:label>bookEdition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/commentText -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/commentText">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>commentText</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/datePublished -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/datePublished">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#externalTerms"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label>datePublished</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/duration -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/duration">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicRecording"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/email">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/familyName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/familyName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>familyName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/faxNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/faxNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>faxNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/gamePlatform -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/gamePlatform">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>gamePlatform</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/givenName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/givenName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>givenName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/image -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/image">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/media/dma#screenshots"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#socialMediaExtensionDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SocialMediaExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>image</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/isbn -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/isbn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>isbn</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/keywords -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/keywords">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#semanticExtensionDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SemanticExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>keywords</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/numTracks -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/numTracks">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>numTracks</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/numberOfItems -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/numberOfItems">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of items relative to a collection</rdfs:comment>
+        <rdfs:label>numberOfItems</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/numberOfPages -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/numberOfPages">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>numberOfPages</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/position -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/position">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/media/dma#seriesPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#trackDp"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicRecording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/postalCode -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/postalCode">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>postalCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/ratingValue -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/ratingValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A rating is an evaluation on a numeric scale, such as 1 to 5 stars.</rdfs:comment>
+        <rdfs:label>ratingValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/requiredMinAge -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/requiredMinAge">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#ContentRating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>requiredMinAge</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/streetAddress">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>streetAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/telephone -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/telephone">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>telephone</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/text -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/text">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/title -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/title">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/typicalAgeRange -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/typicalAgeRange">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>typicalAgeRange</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/url -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/url">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#socialMediaExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#License"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SocialMediaExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/validFrom -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/validFrom">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label>validFrom</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/validUntil -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/validUntil">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label>validUntil</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/value -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/value">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Theme"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Widget"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/Review/reviewBody -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/Review/reviewBody">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>reviewBody</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#accessories -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#accessories">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A piece of hardware used in conjunction with a video game console for playing video games.</rdfs:comment>
+        <rdfs:label>accessories</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#assetDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#assetDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">It defines generic data properties regarding Digital Media Assets</rdfs:comment>
+        <rdfs:label>assetDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#barcode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#barcode">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The barcode for the title padded out buy zeros at the beginning if less than 13 digits</rdfs:comment>
+        <rdfs:label>barcode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#bic -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#bic">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <property:example xml:lang="en">Example: Memoirs|Biography: general</property:example>
+        <rdfs:comment xml:lang="en">Text of BIC Classification Subject Code(s). Book Industry Communication - BIC is the book industry&apos;s independent supply chain organisation, committed to improving the efficiency of the trade and library supply chains.
+Textual description of BIC Classification Subject Code(s) separated by pipes.</rdfs:comment>
+        <rdfs:label>bic</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#bookDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#bookDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productDataProperty"/>
+        <rdfs:comment xml:lang="en">It defines information related to digital books</rdfs:comment>
+        <rdfs:label>bookDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#catalogueNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#catalogueNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <property:example xml:lang="en">Catalogue number example: 5152907001</property:example>
+        <rdfs:comment xml:lang="en">It is any number used to identify an item in a catalogue.</rdfs:comment>
+        <rdfs:label>catalogueNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#copyright -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#copyright">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It defines legal rights created by the law of a country that grants the creator of an original work exclusive rights for its use and distribution.</rdfs:comment>
+        <rdfs:label>copyright</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#creationDate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment xml:lang="en">It defines the precise creation date of an Asset.</rdfs:comment>
+        <rdfs:label>creationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#dewey -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#dewey">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <property:example xml:lang="en">Example: 782.421642092 (edition:23)</property:example>
+        <rdfs:comment xml:lang="en">Dewey Decimal Classification Number (edition specified). The Dewey Decimal Classification Number, from the edition published in mid-2003, DDC 22 - Full DDC (inc full stops and logical breakpoints).</rdfs:comment>
+        <rdfs:comment xml:lang="en">It refers to an identifier that follows the proprietary library classification system Dewey Decimal Classification or just Dewey Decimal System.</rdfs:comment>
+        <rdfs:label>dewey</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#digitalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#digitalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:comment xml:lang="en">An electronic equivalents to peoples&apos; identity cards. You can present a Digital ID electronically to prove your identity or your right to access information or services online.</rdfs:comment>
+        <rdfs:label>digitalIdentifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#dynamicCommunity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#dynamicCommunity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">It defines whether an Asset belongs or not to a social dynamic community inside a multimedia platform like SAM (http://samproject.net). It is often used to recommend Assets to users in a consumption multimedia platform.</rdfs:comment>
+        <rdfs:label>dynamicCommunity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#eTag -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#eTag">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It refers to an opaque identifier assigned to an Asset by a web server to a specific version of a resource found at a URL. ETags can also be used for optimistic concurrency control, as a way to help prevent simultaneous updates of a resource from overwriting each other.</rdfs:comment>
+        <rdfs:label>eTag</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#ediNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#ediNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Theatrical release EDI (Europe Distribution Identifier) number</rdfs:comment>
+        <rdfs:label>ediNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#edition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#edition">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It is one of a series of printings of the same book, newspaper, etc., each issued at a different time and differing from another by alterations, additions, etc.</rdfs:comment>
+        <rdfs:label>edition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#exVatPrice -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#exVatPrice">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">It defines extra value-added tax of any product.</rdfs:comment>
+        <rdfs:label>exVatPrice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#extensionKey -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#extensionKey">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#genericExtensionDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#ownerExtentionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#GenericExtension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#OwnerExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It defines a key as hash identifier in order to assign its corresponding value. It  collects generic information through key, value pairs.</rdfs:comment>
+        <rdfs:label>extensionKey</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#extentionValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#extentionValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#genericExtensionDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#ownerExtentionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#GenericExtension"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#OwnerExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It defines a value as part of a hash element related to a key.  It collects generic information through key, value pairs.</rdfs:comment>
+        <rdfs:label>extentionValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#externalTerms -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#externalTerms">
+        <rdfs:comment xml:lang="en">It refers to terms reused from external sources. In general for grouping terms isolated in the ontology.</rdfs:comment>
+        <rdfs:label>externalTerms</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#gameDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#gameDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productDataProperty"/>
+        <rdfs:comment xml:lang="en">It defines information regarding games</rdfs:comment>
+        <rdfs:label>gameDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#genericExtensionDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#genericExtensionDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:comment xml:lang="en">This describes specific data property extensions for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM platform (http://samproject.net).</rdfs:comment>
+        <rdfs:label>genericExtensionDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#grammar -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#grammar">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#voiceControlExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#VoiceControlExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This  refers  to the grammar for personalized control of the devices that present the particular assets.</rdfs:comment>
+        <rdfs:label>grammar</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#identifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#identifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#socialMediaExtensionDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SocialMediaExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <property:example xml:lang="en">Example: 5152907001|5039036055772|MM0000193719</property:example>
+        <rdfs:comment xml:lang="en">Identifier of the Asset or &lt;cat_code&gt;, 13 digit &lt;barcode&gt; and West10 unique identifier (&lt;ref_no&gt;) separated by pipes</rdfs:comment>
+        <rdfs:label>identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#lastUpdated -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#lastUpdated">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment xml:lang="en">It refers to the latest date time in which an asset has been updated.</rdfs:comment>
+        <rdfs:label>lastUpdated</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#lc -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#lc">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <property:example xml:lang="en">Example: ML420.C2654</property:example>
+        <rdfs:comment xml:lang="en">Any product Library Of Congress Classification code. The shelf code(s) assigned by the American Library of Congress separated by full stops.</rdfs:comment>
+        <rdfs:label>lc</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#linkEnd -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#linkEnd">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">This data property represents the time, in seconds, in which an Asset ends its linking along a time line. It is suitable for videos, musics, etc. Its aim is to indicate the exact time range in which an Asset is related to other when the visualisation or sound is analysed.</rdfs:comment>
+        <rdfs:label>linkEnd</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#linkStart -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#linkStart">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">This data property represents the time, in seconds, in which an Asset starts its linking along a time line. It is suitable for videos, musics, etc. Its aim is to indicate the exact time range in which an Asset is related to other when the visualisation or sound is analysed.</rdfs:comment>
+        <rdfs:label>linkStart</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#linkingExtensionDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#linkingExtensionDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:comment xml:lang="en">This refers to an data property able to represent elements of an Asset that are linked along a time line.</rdfs:comment>
+        <rdfs:label>linkingExtensionDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#movieDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#movieDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productDataProperty"/>
+        <rdfs:comment xml:lang="en">It defines information regarding movies/films/videos</rdfs:comment>
+        <rdfs:label>movieDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#musicDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#musicDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#productDataProperty"/>
+        <rdfs:comment xml:lang="en">It defines information regarding musics</rdfs:comment>
+        <rdfs:label>musicDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#nomenclatureDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#nomenclatureDataProperty">
+        <rdfs:comment xml:lang="en">It defines nomenclature data properties regarding Digital Media Assets</rdfs:comment>
+        <rdfs:label>nomenclatureDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#notes -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#notes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It refers to additional notes to better describe this entity</rdfs:comment>
+        <rdfs:label>notes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#numPlayers -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#numPlayers">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">It defines the number of players regarding a video game.</rdfs:comment>
+        <rdfs:label>numPlayers</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#ownerExtentionDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#ownerExtentionDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:comment xml:lang="en">This refers to a data property able to represent elements of an Asset that set  generic information about owner of this Asset.</rdfs:comment>
+        <rdfs:label>ownerExtentionDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#personDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#personDataProperty">
+        <rdfs:comment xml:lang="en">It defines information about persons</rdfs:comment>
+        <rdfs:label>personDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#postalAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#postalAddress">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:comment xml:lang="en">It defines information regarding postal address</rdfs:comment>
+        <rdfs:label>postalAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#productDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#productDataProperty">
+        <rdfs:comment xml:lang="en">It defines information regarding products</rdfs:comment>
+        <rdfs:label>productDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#referenceNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#referenceNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The record’s unique enterprise&apos;s reference number which is provided to facilitate data updates. It is used for all Film feed records and zeros are used to pad out the &lt;ref_no&gt; to 12 characters</rdfs:comment>
+        <rdfs:label>referenceNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#relatedDbpedia -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#relatedDbpedia">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#semanticExtensionDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#SemanticExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">It refers to Dbpedia entries that can be semantically related to Assets.</rdfs:comment>
+        <rdfs:label>relatedDbpedia</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#screenshots -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#screenshots">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">An image of the item. This can be an URL or a fully described ImageObject</rdfs:comment>
+        <rdfs:label>screenshots</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#semanticExtensionDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#semanticExtensionDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:comment xml:lang="en">This refers to information about the semantic annotation and characterization of assets.</rdfs:comment>
+        <rdfs:label>semanticExtensionDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#series -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#series">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A collection of related films in succession that share the same fictional universe</rdfs:comment>
+        <rdfs:comment xml:lang="en">A segment of content intended for broadcast on over-the-air, cable television, or Internet television, other than a commercial, trailer, or any other segment of content not serving as attraction for viewership</rdfs:comment>
+        <rdfs:comment xml:lang="en">A sequence of products having certain characteristics in common that are formally identified together as a group.</rdfs:comment>
+        <rdfs:label>series</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#seriesPart -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#seriesPart">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">It indicates a precise position into a serie.</rdfs:comment>
+        <rdfs:label>seriesPart</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#socialMediaExtensionDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#socialMediaExtensionDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:comment xml:lang="en">This refers to social media aspects of an asset such as the related Facebook pages or Twitter accounts.</rdfs:comment>
+        <rdfs:label>socialMediaExtensionDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#sourceElement -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#sourceElement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It determines the subject of a linking extension.</rdfs:comment>
+        <rdfs:label>sourceElement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#sourceValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#sourceValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <property:example xml:lang="en">For a Movie Asset, this data property sets the address to reproduce the related movie. An hypothetical example can be:  http://hbo/movie/hbo.avi</property:example>
+        <rdfs:comment xml:lang="en">It refers to any URI or address of an Asset were the digital element can be found.</rdfs:comment>
+        <rdfs:label>sourceValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#syndicationExtensionDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#syndicationExtensionDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:comment xml:lang="en">This refers to processes related to the syndication of assets and their presentation to end-users.</rdfs:comment>
+        <rdfs:label>syndicationExtensionDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#targetElement -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#targetElement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It determines the object of a linking extension.</rdfs:comment>
+        <rdfs:label>targetElement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#targetId -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#targetId">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It determines the object identifier of a linking extension.</rdfs:comment>
+        <rdfs:label>targetId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#trackDp -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#trackDp">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdfs:comment>It refers a generic data property regarding tracks.</rdfs:comment>
+        <rdfs:label>trackDp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#trackISRC -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#trackISRC">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#trackDp"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicRecording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ISRC of track (where known). The International Standard Recording Code (ISRC) is an international standard code for uniquely identifying sound recordings and music video recordings.</rdfs:comment>
+        <rdfs:label>trackISRC</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#vatPrice -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#vatPrice">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">It defines value-added tax of any product.</rdfs:comment>
+        <rdfs:label>vatPrice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#voiceControlExtensionDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#voiceControlExtensionDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdfs:comment xml:lang="en">This  refers  to information and grammar for personalized control of the devices that present the particular assets.</rdfs:comment>
+        <rdfs:label>voiceControlExtensionDataProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/FictionalCharacter -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/FictionalCharacter">
+        <owl:equivalentClass rdf:resource="https://w3id.org/media/dma#Character"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:label>FictionalCharacter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Profession -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Profession">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <rdfs:label>Profession</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Book -->
+
+    <owl:Class rdf:about="https://schema.org/Book">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:label>Book</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Country -->
+
+    <owl:Class rdf:about="https://schema.org/Country">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+        <property:example xml:lang="en">For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.</property:example>
+        <rdfs:comment xml:lang="en">a state or nation</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Movie -->
+
+    <owl:Class rdf:about="https://schema.org/Movie">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:label>Movie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/MusicAlbum -->
+
+    <owl:Class rdf:about="https://schema.org/MusicAlbum">
+        <owl:equivalentClass rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:label>MusicAlbum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/MusicRecording -->
+
+    <owl:Class rdf:about="https://schema.org/MusicRecording">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:comment xml:lang="en">A music recording (track), usually a single song.</rdfs:comment>
+        <rdfs:label>MusicRecording</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+    <owl:Class rdf:about="https://schema.org/Organization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:label>Organisation</rdfs:label>
+        <rdfs:label>OrganisationAsset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+    <owl:Class rdf:about="https://schema.org/Person">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:label>Person</rdfs:label>
+        <rdfs:label>PersonAsset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Place -->
+
+    <owl:Class rdf:about="https://schema.org/Place">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <rdfs:comment xml:lang="en">Entities that have a fixed physical extension.</rdfs:comment>
+        <rdfs:label>Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/PostalAddressExtension -->
+
+    <owl:Class rdf:about="https://schema.org/PostalAddressExtension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
+        <property:example>For instance, postal address of an editiorial that publishes books.</property:example>
+        <rdfs:comment>This extension encloses information about postal adress related to assets.</rdfs:comment>
+        <rdfs:label>PostalAddressExtension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/VideoGame -->
+
+    <owl:Class rdf:about="https://schema.org/VideoGame">
+        <owl:equivalentClass rdf:resource="https://w3id.org/media/dma#Game"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:label>VideoGame</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Asset -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Asset">
+        <property:example xml:lang="en">A film record may be improved and increased in commercial value by addiing recommendations, reviews, ratings or comments.</property:example>
+        <rdfs:comment xml:lang="en">It defines content held in or linked to a multimedia platform which may be extended with additional content.</rdfs:comment>
+        <rdfs:label>Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#AssetType -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#AssetType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <rdfs:comment xml:lang="en">It indicates the type of a Digital Media Asset</rdfs:comment>
+        <rdfs:label>AssetType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Character -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Character">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Person"/>
+        <rdfs:label>Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#ContentRating -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#ContentRating">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <rdfs:comment xml:lang="en">It indicates the user age range allowed to consume a specific Asset</rdfs:comment>
+        <rdfs:label>ContentRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#EncodingFormat -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#EncodingFormat">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">It can be DVD, AVI, JPEG, etc.</property:example>
+        <rdfs:comment xml:lang="en">It is a content representation format for storage or transmission of digital content.</rdfs:comment>
+        <rdfs:label>EncodingFormat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Extension -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Extension">
+        <rdfs:comment xml:lang="en">Extension describes specific classes for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM (http://samproject.net)</rdfs:comment>
+        <rdfs:label>Extension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#ExternalConcepts -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#ExternalConcepts">
+        <rdfs:comment xml:lang="en">Class concept coming from an external source or ontology</rdfs:comment>
+        <rdfs:label>ExternalConcepts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Game -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Game">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:label>Game</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Gender -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Gender">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">e.g. Male, Female</property:example>
+        <rdfs:comment xml:lang="en">It is the range of characteristics pertaining to, and differentiating between, masculinity and femininity.</rdfs:comment>
+        <rdfs:label>Gender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#GenericExtension -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#GenericExtension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
+        <rdfs:comment xml:lang="en">This extension refers to a class able to represent generic elements. This provides fields for representing any pair of data by using KEY, VALUE attributes. By considering this representation it is possible to set any data not defined  yet in the ontology.</rdfs:comment>
+        <rdfs:label>GenericExtension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Genre -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Genre">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">e.g. for movies Action, Drama, etc.</property:example>
+        <rdfs:comment xml:lang="en">It is a category of literature, music, or other forms of art and entertainment, whether written or spoken, audio or visual, based on some set of stylistic criteria, yet genres can be aesthetic, rhetorical, communicative, or functional.</rdfs:comment>
+        <rdfs:label>Genre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Language -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Language">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">These can be English, Spanish, etc.
+In case of machine systems they can be symbols for coding, like: Java, C, etc.</property:example>
+        <rdfs:comment xml:lang="en">It represents the ability to acquire and use complex systems of communication, particularly the human ability to do so, and a language is any specific example of such a system. Usually the language is associated to geographic regions or countries.</rdfs:comment>
+        <rdfs:label>Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#License -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#License">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">e.g. Creative Commons, Non-Commercial, GPL, etc.</property:example>
+        <rdfs:comment xml:lang="en">It defines an authorization (by the licensor) to use the licensed material (by the licensee).</rdfs:comment>
+        <rdfs:label>License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#LinkingExtension -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#LinkingExtension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
+        <rdfs:comment xml:lang="en">This represents information about basic and advanced asset linking and compositions.</rdfs:comment>
+        <rdfs:label>LinkingExtension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Music -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Music">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:label>Music</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Nomenclature -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Nomenclature">
+        <rdfs:comment xml:lang="en">Catalog of proper names or technical voices of a discipline</rdfs:comment>
+        <rdfs:label>Nomenclature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#OwnerExtension -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#OwnerExtension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
+        <rdfs:comment xml:lang="en">This extension represents generic information about the owner of the asset. It provides fields for representing any pair of data by using KEY, VALUE attributes. By considering this representation it is possible to set any data not defined yet in the ontology.</rdfs:comment>
+        <rdfs:label>OwnerExtension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Product -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Product">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <property:example xml:lang="en">e.g. digital book, movie, album, etc.</property:example>
+        <rdfs:comment xml:lang="en">It defines anything that can be offered to a digital market that might satisfy a want or need.</rdfs:comment>
+        <rdfs:label>Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#SemanticExtension -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#SemanticExtension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
+        <property:example xml:lang="en">For instance related Assets and Dbpedia entries.</property:example>
+        <rdfs:comment xml:lang="en">This extension represents all information regarding semantic annotations and characterization of assets.</rdfs:comment>
+        <rdfs:label>SemanticExtension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#SocialMediaExtension -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#SocialMediaExtension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
+        <rdfs:comment xml:lang="en">This extension represents social media aspects of an asset such as its related Facebook pages or Twitter accounts.</rdfs:comment>
+        <rdfs:label>SocialMediaExtension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#SourceType -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#SourceType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">e.g.  Wikipedia, Social Media, etc.</property:example>
+        <rdfs:comment xml:lang="en">It defines literally the type of source usually used to differentiate digital sources.</rdfs:comment>
+        <rdfs:label>SourceType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Status -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Status">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">e.g.  Draft, Published, etc.</property:example>
+        <rdfs:comment xml:lang="en">It defines the Asset&apos;s status through the life cycle of a production/exploitation system.</rdfs:comment>
+        <rdfs:label>Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#SyndicationExtension -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#SyndicationExtension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
+        <rdfs:comment xml:lang="en">This extension refers to processes related to the syndication of assets and their presentation to end-users.</rdfs:comment>
+        <rdfs:label>SyndicationExtension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Theme -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Theme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">e.g. Standard 1, Standard 2, Standard X, Enriched X, etc.</property:example>
+        <rdfs:comment xml:lang="en">It defines the visualisation theme label of an Asset inside a production/exploitation system. This is flexible and can define any label as value for further interpretations by programming rules. Its aim is associating specific visualisation styles when an Asset is being visualised in a widget in a platform.</rdfs:comment>
+        <rdfs:label>Theme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#VoiceControlExtension -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#VoiceControlExtension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
+        <rdfs:comment xml:lang="en">This extension includes information and grammar for personalized control of the devices that present particular assets.</rdfs:comment>
+        <rdfs:label>VoiceControlExtension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/media/dma#Widget -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Widget">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <property:example xml:lang="en">For example a &quot;Document Widget&quot; for associating an Asset with a the programing widget that fit with its proper visualisation inside a platform. 
+Other examples can be &quot;Movie Widget&quot;, &quot;Album Widget&quot;, etc.</property:example>
+        <rdfs:comment xml:lang="en">It defines the visualisation widget label for Assets inside a production/exploitation system. This is flexible and can define any label as value.</rdfs:comment>
+        <rdfs:label>Widget</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

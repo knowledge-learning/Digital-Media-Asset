@@ -1,0 +1,935 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/media/dma/1.0"
+     xml:base="https://w3id.org/media/dma/1.0"
+     xmlns:schema="https://schema.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ONTOLegolang_UAge="https://w3id.org/nlp/ONTOLegolang_UAge#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:edm="http://www.europeana.eu/schemas/edm#"
+     xmlns:ElementsGr2="http://rdvocab.info/ElementsGr2/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:schemas="http://schema.org/"
+     xmlns:property="http://dbpedia.org/property/"
+     xmlns:dma="https://w3id.org/media/dma#"
+     xmlns:ontology="http://dbpedia.org/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy">
+        <owl:versionIRI rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy/1.0"/>
+        <owl:imports rdf:resource="https://www.dropbox.com/s/jmcu942pbytqx1a/dma.owl?dl=0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/role -->
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/ontology/role"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/basedOn -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/basedOn"/>
+    
+
+
+    <!-- http://dbpedia.org/property/adaptation -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/property/adaptation"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://rdvocab.info/ElementsGr2/professionOrOccupation -->
+
+    <owl:ObjectProperty rdf:about="http://rdvocab.info/ElementsGr2/professionOrOccupation"/>
+    
+
+
+    <!-- https://schema.org/author -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/author"/>
+    
+
+
+    <!-- https://schema.org/contributor -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/contributor"/>
+    
+
+
+    <!-- https://schema.org/encodingFormat -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/encodingFormat"/>
+    
+
+
+    <!-- https://schema.org/genre -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/genre"/>
+    
+
+
+    <!-- https://schema.org/publisher -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/publisher"/>
+    
+
+
+    <!-- https://schema.org/track -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/track"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#owner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#owner"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#recording -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#recording"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#relatedAsset -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/media/dma#relatedAsset"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://rdvocab.info/ElementsGr2/dateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://rdvocab.info/ElementsGr2/dateOfBirth"/>
+    
+
+
+    <!-- http://rdvocab.info/ElementsGr2/dateOfDeath -->
+
+    <owl:DatatypeProperty rdf:about="http://rdvocab.info/ElementsGr2/dateOfDeath"/>
+    
+
+
+    <!-- https://schema.org/alternateName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/alternateName"/>
+    
+
+
+    <!-- https://schema.org/givenName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/givenName"/>
+    
+
+
+    <!-- https://schema.org/numTracks -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/numTracks"/>
+    
+
+
+    <!-- https://schema.org/position -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/position"/>
+    
+
+
+    <!-- https://schema.org/title -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/title"/>
+    
+
+
+    <!-- https://schema.org/value -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/value"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#series -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#series"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#seriesPart -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#seriesPart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Profession -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Profession"/>
+    
+
+
+    <!-- https://schema.org/Book -->
+
+    <owl:Class rdf:about="https://schema.org/Book"/>
+    
+
+
+    <!-- https://schema.org/Movie -->
+
+    <owl:Class rdf:about="https://schema.org/Movie"/>
+    
+
+
+    <!-- https://schema.org/MusicRecording -->
+
+    <owl:Class rdf:about="https://schema.org/MusicRecording"/>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+    <owl:Class rdf:about="https://schema.org/Organization"/>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+    <owl:Class rdf:about="https://schema.org/Person"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#Asset -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Asset"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#Character -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Character"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#Game -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Game"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#Genre -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Genre"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#Language -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Language"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#Music -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Music"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#Nomenclature -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Nomenclature"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#Product -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#Product"/>
+    
+
+
+    <!-- https://w3id.org/media/dma#SourceType -->
+
+    <owl:Class rdf:about="https://w3id.org/media/dma#SourceType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Spy_fiction -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Spy_fiction">
+        <owl:sameAs rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#SPY_FICTION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Writer -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Writer">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <owl:sameAs rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
+        <schema:title>WRITER</schema:title>
+        <schema:value>WRITER</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.org/director -->
+
+    <owl:NamedIndividual rdf:about="https://schema.org/director">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <owl:sameAs rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#DIRECTOR"/>
+        <schema:title>DIRECTOR</schema:title>
+        <schema:value>DIRECTOR</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#ACTION -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#ACTION">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Genre"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#ACTOR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#ACTOR">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#BDS -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS">
+        <rdf:type rdf:resource="https://schema.org/Organization"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <schema:alternateName>BDS</schema:alternateName>
+        <schema:title>Bibliographic Data Services</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#BLUE-RAY -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#BLUE-RAY">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#SourceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale">
+        <rdf:type rdf:resource="https://schema.org/Movie"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
+        <ontology:basedOn rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_novel"/>
+        <property:adaptation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_novel"/>
+        <dc:language rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#EN"/>
+        <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Paul_Haggis"/>
+        <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Robert_Wade"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Daniel_Craig"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#James_Bond"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Le_Chiffre"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Campbell"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Paul_Haggis"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Robert_Wade"/>
+        <schema:encodingFormat rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BLUE-RAY"/>
+        <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#ACTION"/>
+        <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#SPY_FICTION"/>
+        <schema:title>Casino Royale Movie</schema:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Daniel_Craig"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#ACTOR"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#STAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#James_Bond"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Spy"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Le_Chiffre"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Terrorist_banker"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#ACTOR"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#STAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Campbell"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#DIRECTOR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Paul_Haggis"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Writer"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Robert_Wade"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Writer"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_Original_Sound_Track -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_Original_Sound_Track">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
+        <schema:track rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#You_Know_My_Name"/>
+        <schema:track rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#The_Name&apos;s_Bond,_James_Bond"/>
+        <schema:numTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</schema:numTracks>
+        <schema:title>Casino Royale (2006 soundtrack)</schema:title>
+        <dma:series>James Bond</dma:series>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_Original_Sound_Track"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_novel -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_novel">
+        <rdf:type rdf:resource="https://schema.org/Book"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
+        <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Ian_Fleming"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Ian_Fleming"/>
+        <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#NOVEL"/>
+        <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#SPY_FICTION"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1953-04-13T00:00:00-00:00</terms:issued>
+        <schema:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casino Royale</schema:title>
+        <dma:series>James Bond</dma:series>
+        <dma:series>James Bond Novels</dma:series>
+        <dma:seriesPart rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dma:seriesPart>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_novel"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Ian_Fleming"/>
+        <ontology:role rdf:resource="http://dbpedia.org/resource/Writer"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Chris_Cornell -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Chris_Cornell">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#SINGER"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
+        <schema:title>Chris Cornell</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#DIRECTOR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#DIRECTOR">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <schema:title>WRITER</schema:title>
+        <schema:value>WRITER</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#DW -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#DW">
+        <rdf:type rdf:resource="https://schema.org/Organization"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <schema:alternateName>Deutche Welle</schema:alternateName>
+        <schema:title>DW</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Daniel_Craig -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Daniel_Craig">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#ACTOR"/>
+        <schema:title>Daniel Craig</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
+        <schema:title>David Arnol</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#David_Doak -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Doak">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
+        <schema:title>David Doak</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Dr._No -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Dr._No">
+        <rdf:type rdf:resource="https://schema.org/Book"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
+        <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Ian_Fleming"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Ian_Fleming"/>
+        <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#SPY_FICTION"/>
+        <schema:title>Dr. No</schema:title>
+        <dma:series>James Bond Novels</dma:series>
+        <dma:seriesPart rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</dma:seriesPart>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#EN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#EN">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Language"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <schema:title>English</schema:title>
+        <schema:value>English</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Euromaxx_Dossier_-_Mads_Mikkelsen -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Euromaxx_Dossier_-_Mads_Mikkelsen">
+        <rdf:type rdf:resource="https://schema.org/Movie"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
+        <dc:language rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#EN"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen"/>
+        <schema:encodingFormat rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BLUE-RAY"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
+        <schema:title>Euromaxx Dossier - Mads Mikkelsen</schema:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Euromaxx_Dossier_-_Mads_Mikkelsen"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#STAR"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#FIRST-PERSON_SHOOTER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#FIRST-PERSON_SHOOTER">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Genre"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#GoldenEye007_Video_Game -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#GoldenEye007_Video_Game">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Game"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
+        <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Hollis"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Doak"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Hollis"/>
+        <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#FIRST-PERSON_SHOOTER"/>
+        <schema:publisher rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Nintendo"/>
+        <dma:relatedAsset rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
+        <schema:title>GoldenEye 007 (1997 video game)</schema:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#GoldenEye007_Video_Game"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Doak"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Writer"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#GoldenEye007_Video_Game"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Hollis"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#DIRECTOR"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Ian_Fleming -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Ian_Fleming">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
+        <ElementsGr2:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1908-05-28T00:00:00-00:00</ElementsGr2:dateOfBirth>
+        <ElementsGr2:dateOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1964-09-12T00:00:00-00:00</ElementsGr2:dateOfDeath>
+        <schema:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fleming</schema:givenName>
+        <schema:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian</schema:givenName>
+        <schema:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian Fleming</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#James_Bond -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#James_Bond">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Character"/>
+        <ontology:basedOn rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_novel"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#SPY"/>
+        <schema:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">007</schema:alternateName>
+        <schema:title>James Bond</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#LM_Azpiazu -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#LM_Azpiazu">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Le_Chiffre -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Le_Chiffre">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Character"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#TERRORIST_BANKER"/>
+        <schema:title>Le Chiffre</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#ACTOR"/>
+        <schema:title>Mads Mikkelsen</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Campbell -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Campbell">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#DIRECTOR"/>
+        <schema:title>Martin Campbell</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Hollis -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Hollis">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#DIRECTOR"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
+        <schema:title>Martin Hollis</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#NOVEL -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#NOVEL">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Genre"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Nintendo -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Nintendo">
+        <rdf:type rdf:resource="https://schema.org/Organization"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
+        <schema:title>Nintendo</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <schema:title>PRODUCER</schema:title>
+        <schema:value>PRODUCER</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Paul_Haggis -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Paul_Haggis">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
+        <schema:title>Paul Haggis</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#ROCK -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#ROCK">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Genre"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Robert_Wade -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Robert_Wade">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
+        <schema:title>Robert Wade</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#SINGER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#SINGER">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#SPY -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#SPY">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#SPY_FICTION -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#SPY_FICTION">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Genre"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <schema:title>Spy fiction</schema:title>
+        <schema:value>Spy fiction</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#STAR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#STAR">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#TERRORIST_BANKER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#TERRORIST_BANKER">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <schema:title>Terrorist banker</schema:title>
+        <schema:value>Terrorist banker</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
+        <schema:title>Writer</schema:title>
+        <schema:value>Writer</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#You_Know_My_Name -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#You_Know_My_Name">
+        <rdf:type rdf:resource="https://schema.org/MusicRecording"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
+        <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Chris_Cornell"/>
+        <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Chris_Cornell"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
+        <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#ROCK"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
+        <dma:recording rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_Original_Sound_Track"/>
+        <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</schema:position>
+        <schema:title>You Know My Name</schema:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#You_Know_My_Name"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Chris_Cornell"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#SINGER"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Writer"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#You_Know_My_Name"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Writer"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#The_Name&apos;s_Bond,_James_Bond -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#The_Name&apos;s_Bond,_James_Bond">
+        <rdf:type rdf:resource="https://schema.org/MusicRecording"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
+        <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#LM_Azpiazu"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
+        <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#LM_Azpiazu"/>
+        <dma:recording rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_Original_Sound_Track"/>
+        <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</schema:position>
+        <schema:title>The Name&apos;s Bond, James Bond</schema:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#The_Name&apos;s_Bond,_James_Bond"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#The_Name&apos;s_Bond,_James_Bond"/>
+        <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#LM_Azpiazu"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Writer"/>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
