@@ -18,7 +18,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy">
         <owl:versionIRI rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy/1.0"/>
-        <owl:imports rdf:resource="https://www.dropbox.com/s/jmcu942pbytqx1a/dma.owl?dl=0"/>
+        <owl:imports rdf:resource="https://w3id.org/media/dma/1.0"/>
     </owl:Ontology>
     
 
