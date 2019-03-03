@@ -25,8 +25,8 @@
         <property:contactInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ygutierrez[at]dlsi.ua.es, dtomas[at]dlsi.ua.es, imoreno[at]dlsi.ua.es, ameny[at]mail.ntua.gr, alps[at]mail.ntua.gr</property:contactInfo>
         <property:copyright rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © 2016 by Information Systems and Language Processing Workgroup
 All rights reserved.</property:copyright>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01 T10:00:00+1:00</dc:date>
-        <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01 T10:00:00+1:00</dcterms:dateCopyrighted>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01T10:00:00</dc:date>
+        <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01T10:00:00</dcterms:dateCopyrighted>
         <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 Unported License</dcterms:license>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology aims to provide a web semantic standard for representing Digital Media Assets or simply Assets. Digital Media Assets covered by this ontology ranges from Product Assets (like Album, Movie and Book) to the representation of Person and Organisation Assets. It allows to link those products with real contributors and/or enterprises.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Media Asset</rdfs:label>
