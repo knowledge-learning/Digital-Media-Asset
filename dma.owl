@@ -27,11 +27,11 @@
 All rights reserved.</property:copyright>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01T10:00:00</dc:date>
         <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01T10:00:00</dcterms:dateCopyrighted>
-        <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 Unported License</dcterms:license>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology aims to provide a web semantic standard for representing Digital Media Assets or simply Assets. Digital Media Assets covered by this ontology ranges from Product Assets (like Album, Movie and Book) to the representation of Person and Organisation Assets. It allows to link those products with real contributors and/or enterprises.</rdfs:comment>
+        <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 4.0 International License</dcterms:license>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology aims to provide a web semantic standard for representing Digital Media Assets or simply Assets. Digital Media Assets covered by this ontology ranges from Product Assets (like Album, Movie, Game and Book) to the representation of Person and Organisation Assets. It allows to link those products with real contributors and/or enterprises.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Media Asset</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
-        <ONTOLegolang_UAge:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</ONTOLegolang_UAge:numberOfClasses>
+        <ONTOLegolang_UAge:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</ONTOLegolang_UAge:numberOfClasses>
         <ONTOLegolang_UAge:numberOfDataProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</ONTOLegolang_UAge:numberOfDataProperties>
         <ONTOLegolang_UAge:numberOfObjectProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</ONTOLegolang_UAge:numberOfObjectProperties>
     </owl:Ontology>
@@ -1926,7 +1926,7 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <!-- http://dbpedia.org/ontology/FictionalCharacter -->
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/FictionalCharacter">
-        <owl:equivalentClass rdf:resource="https://w3id.org/media/dma#Character"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Character"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
         <rdfs:label>FictionalCharacter</rdfs:label>
     </owl:Class>
