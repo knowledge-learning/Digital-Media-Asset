@@ -235,6 +235,12 @@
     
 
 
+    <!-- https://schema.org/MusicAlbum -->
+
+    <owl:Class rdf:about="https://schema.org/MusicAlbum"/>
+    
+
+
     <!-- https://schema.org/MusicRecording -->
 
     <owl:Class rdf:about="https://schema.org/MusicRecording"/>
@@ -253,6 +259,12 @@
     
 
 
+    <!-- https://schema.org/VideoGame -->
+
+    <owl:Class rdf:about="https://schema.org/VideoGame"/>
+    
+
+
     <!-- https://w3id.org/media/dma#Asset -->
 
     <owl:Class rdf:about="https://w3id.org/media/dma#Asset"/>
@@ -265,12 +277,6 @@
     
 
 
-    <!-- https://w3id.org/media/dma#Game -->
-
-    <owl:Class rdf:about="https://w3id.org/media/dma#Game"/>
-    
-
-
     <!-- https://w3id.org/media/dma#Genre -->
 
     <owl:Class rdf:about="https://w3id.org/media/dma#Genre"/>
@@ -280,12 +286,6 @@
     <!-- https://w3id.org/media/dma#Language -->
 
     <owl:Class rdf:about="https://w3id.org/media/dma#Language"/>
-    
-
-
-    <!-- https://w3id.org/media/dma#Music -->
-
-    <owl:Class rdf:about="https://w3id.org/media/dma#Music"/>
     
 
 
@@ -368,6 +368,14 @@
     
 
 
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#ADVENTURE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#ADVENTURE">
+        <rdf:type rdf:resource="https://w3id.org/media/dma#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#BDS -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS">
@@ -408,8 +416,12 @@
         <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Robert_Wade"/>
         <schema:encodingFormat rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BLUE-RAY"/>
         <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#ACTION"/>
+        <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#ADVENTURE"/>
         <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#SPY_FICTION"/>
+        <schema:track rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#You_Know_My_Name"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#DW"/>
         <schema:title>Casino Royale Movie</schema:title>
+        <dma:relatedDbpedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://live.nl.dbpedia.org/resource/Casino_Royale_(2006_film)</dma:relatedDbpedia>
     </owl:NamedIndividual>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
@@ -461,12 +473,13 @@
     <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_Original_Sound_Track -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_Original_Sound_Track">
+        <rdf:type rdf:resource="https://schema.org/MusicAlbum"/>
         <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
-        <rdf:type rdf:resource="https://w3id.org/media/dma#Music"/>
         <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
         <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
         <schema:track rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#You_Know_My_Name"/>
         <schema:track rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#The_Name&apos;s_Bond,_James_Bond"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
         <schema:numTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</schema:numTracks>
         <schema:title>Casino Royale (2006 soundtrack)</schema:title>
         <dma:series>James Bond</dma:series>
@@ -476,6 +489,7 @@
         <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
         <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol"/>
         <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER"/>
+        <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
     </owl:Axiom>
     
 
@@ -558,6 +572,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Arnol">
         <rdf:type rdf:resource="https://schema.org/Person"/>
         <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#MUSICIAN"/>
         <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#PRODUCER"/>
         <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
         <schema:title>David Arnol</schema:title>
@@ -612,7 +627,7 @@
         <dc:language rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#EN"/>
         <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen"/>
         <schema:encodingFormat rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BLUE-RAY"/>
-        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#DW"/>
         <schema:title>Euromaxx Dossier - Mads Mikkelsen</schema:title>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -636,14 +651,15 @@
     <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#GoldenEye007_Video_Game -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#GoldenEye007_Video_Game">
+        <rdf:type rdf:resource="https://schema.org/VideoGame"/>
         <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
-        <rdf:type rdf:resource="https://w3id.org/media/dma#Game"/>
         <rdf:type rdf:resource="https://w3id.org/media/dma#Product"/>
         <schema:author rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Hollis"/>
         <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#David_Doak"/>
         <schema:contributor rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Hollis"/>
         <schema:genre rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#FIRST-PERSON_SHOOTER"/>
         <schema:publisher rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Nintendo"/>
+        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
         <dma:relatedAsset rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale"/>
         <schema:title>GoldenEye 007 (1997 video game)</schema:title>
     </owl:NamedIndividual>
@@ -659,6 +675,15 @@
         <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Martin_Hollis"/>
         <ontology:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#DIRECTOR"/>
     </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Hans_Zimmer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Hans_Zimmer">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <ElementsGr2:professionOrOccupation rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#MUSICIAN"/>
+    </owl:NamedIndividual>
     
 
 
@@ -712,6 +737,14 @@
     
 
 
+    <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#MUSICIAN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#MUSICIAN">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Mads_Mikkelsen">
@@ -760,7 +793,6 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#Nintendo">
         <rdf:type rdf:resource="https://schema.org/Organization"/>
         <rdf:type rdf:resource="https://w3id.org/media/dma#Asset"/>
-        <dma:owner rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#BDS"/>
         <schema:title>Nintendo</schema:title>
     </owl:NamedIndividual>
     
@@ -862,8 +894,8 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER">
         <rdf:type rdf:resource="http://dbpedia.org/ontology/Profession"/>
         <rdf:type rdf:resource="https://w3id.org/media/dma#Nomenclature"/>
-        <schema:title>Writer</schema:title>
-        <schema:value>Writer</schema:value>
+        <schema:title>WRITER</schema:title>
+        <schema:value>WRITER</schema:value>
     </owl:NamedIndividual>
     
 
@@ -883,6 +915,7 @@
         <dma:recording rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_Original_Sound_Track"/>
         <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</schema:position>
         <schema:title>You Know My Name</schema:title>
+        <dma:relatedDbpedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/You_Know_My_Name</dma:relatedDbpedia>
     </owl:NamedIndividual>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#You_Know_My_Name"/>

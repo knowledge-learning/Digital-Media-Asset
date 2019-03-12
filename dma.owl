@@ -25,13 +25,13 @@
         <property:contactInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ygutierrez[at]dlsi.ua.es, dtomas[at]dlsi.ua.es, imoreno[at]dlsi.ua.es, ameny[at]mail.ntua.gr, alps[at]mail.ntua.gr</property:contactInfo>
         <property:copyright rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © 2016 by Information Systems and Language Processing Workgroup
 All rights reserved.</property:copyright>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01 T10:00:00+1:00</dc:date>
-        <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01 T10:00:00+1:00</dcterms:dateCopyrighted>
-        <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 Unported License</dcterms:license>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology aims to provide a web semantic standard for representing Digital Media Assets or simply Assets. Digital Media Assets covered by this ontology ranges from Product Assets (like Album, Movie and Book) to the representation of Person and Organisation Assets. It allows to link those products with real contributors and/or enterprises.</rdfs:comment>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01T10:00:00</dc:date>
+        <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01T10:00:00</dcterms:dateCopyrighted>
+        <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 4.0 International License</dcterms:license>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology aims to provide a web semantic standard for representing Digital Media Assets or simply Assets. Digital Media Assets covered by this ontology ranges from Product Assets (like Album, Movie, Game and Book) to the representation of Person and Organisation Assets. It allows to link those products with real contributors and/or enterprises.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Media Asset</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
-        <ONTOLegolang_UAge:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</ONTOLegolang_UAge:numberOfClasses>
+        <ONTOLegolang_UAge:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</ONTOLegolang_UAge:numberOfClasses>
         <ONTOLegolang_UAge:numberOfDataProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</ONTOLegolang_UAge:numberOfDataProperties>
         <ONTOLegolang_UAge:numberOfObjectProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</ONTOLegolang_UAge:numberOfObjectProperties>
     </owl:Ontology>
@@ -454,7 +454,7 @@ All rights reserved.</property:copyright>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicObjectProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/Movie"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicAlbum"/>
         <rdfs:range rdf:resource="https://schema.org/MusicRecording"/>
         <rdfs:label>track</rdfs:label>
     </owl:ObjectProperty>
@@ -637,7 +637,7 @@ All rights reserved.</property:copyright>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#trackOp"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/MusicRecording"/>
-        <rdfs:range rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:range rdf:resource="https://schema.org/MusicAlbum"/>
         <rdfs:comment xml:lang="en">It refers to the music album to which a track belongs.</rdfs:comment>
         <rdfs:label>recording</rdfs:label>
     </owl:ObjectProperty>
@@ -943,8 +943,8 @@ All rights reserved.</property:copyright>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#movieDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/Movie"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicAlbum"/>
         <rdfs:domain rdf:resource="https://schema.org/MusicRecording"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label>duration</rdfs:label>
     </owl:DatatypeProperty>
@@ -989,7 +989,7 @@ All rights reserved.</property:copyright>
 
     <owl:DatatypeProperty rdf:about="https://schema.org/gamePlatform">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Game"/>
+        <rdfs:domain rdf:resource="https://schema.org/VideoGame"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>gamePlatform</rdfs:label>
     </owl:DatatypeProperty>
@@ -1050,7 +1050,7 @@ All rights reserved.</property:copyright>
     <owl:DatatypeProperty rdf:about="https://schema.org/numTracks">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicAlbum"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label>numTracks</rdfs:label>
     </owl:DatatypeProperty>
@@ -1064,7 +1064,7 @@ All rights reserved.</property:copyright>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/Movie"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicAlbum"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Number of items relative to a collection</rdfs:comment>
         <rdfs:label>numberOfItems</rdfs:label>
@@ -1264,7 +1264,7 @@ All rights reserved.</property:copyright>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#accessories">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Game"/>
+        <rdfs:domain rdf:resource="https://schema.org/VideoGame"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A piece of hardware used in conjunction with a video game console for playing video games.</rdfs:comment>
         <rdfs:label>accessories</rdfs:label>
@@ -1304,7 +1304,7 @@ All rights reserved.</property:copyright>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookDataProperty"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/Book"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicAlbum"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <property:example xml:lang="en">Example: Memoirs|Biography: general</property:example>
         <rdfs:comment xml:lang="en">Text of BIC Classification Subject Code(s). Book Industry Communication - BIC is the book industry&apos;s independent supply chain organisation, committed to improving the efficiency of the trade and library supply chains.
@@ -1649,8 +1649,8 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#personDataProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/Book"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicAlbum"/>
         <rdfs:domain rdf:resource="https://schema.org/Person"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">It refers to additional notes to better describe this entity</rdfs:comment>
         <rdfs:label>notes</rdfs:label>
@@ -1663,7 +1663,7 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#numPlayers">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#gameDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Game"/>
+        <rdfs:domain rdf:resource="https://schema.org/VideoGame"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">It defines the number of players regarding a video game.</rdfs:comment>
         <rdfs:label>numPlayers</rdfs:label>
@@ -1767,7 +1767,7 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#musicDataProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/Book"/>
         <rdfs:domain rdf:resource="https://schema.org/Movie"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Music"/>
+        <rdfs:domain rdf:resource="https://schema.org/MusicAlbum"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A collection of related films in succession that share the same fictional universe</rdfs:comment>
         <rdfs:comment xml:lang="en">A segment of content intended for broadcast on over-the-air, cable television, or Internet television, other than a commercial, trailer, or any other segment of content not serving as attraction for viewership</rdfs:comment>
@@ -1926,8 +1926,7 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <!-- http://dbpedia.org/ontology/FictionalCharacter -->
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/FictionalCharacter">
-        <owl:equivalentClass rdf:resource="https://w3id.org/media/dma#Character"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Character"/>
         <rdfs:label>FictionalCharacter</rdfs:label>
     </owl:Class>
     
@@ -1945,7 +1944,6 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <!-- https://schema.org/Book -->
 
     <owl:Class rdf:about="https://schema.org/Book">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
         <rdfs:label>Book</rdfs:label>
     </owl:Class>
@@ -1966,8 +1964,9 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <!-- https://schema.org/Movie -->
 
     <owl:Class rdf:about="https://schema.org/Movie">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
+        <rdfs:comment>Film</rdfs:comment>
+        <rdfs:comment>Video</rdfs:comment>
         <rdfs:label>Movie</rdfs:label>
     </owl:Class>
     
@@ -1976,8 +1975,7 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <!-- https://schema.org/MusicAlbum -->
 
     <owl:Class rdf:about="https://schema.org/MusicAlbum">
-        <owl:equivalentClass rdf:resource="https://w3id.org/media/dma#Music"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
         <rdfs:label>MusicAlbum</rdfs:label>
     </owl:Class>
     
@@ -1986,7 +1984,6 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <!-- https://schema.org/MusicRecording -->
 
     <owl:Class rdf:about="https://schema.org/MusicRecording">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
         <rdfs:comment xml:lang="en">A music recording (track), usually a single song.</rdfs:comment>
         <rdfs:label>MusicRecording</rdfs:label>
@@ -1998,7 +1995,6 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
 
     <owl:Class rdf:about="https://schema.org/Organization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Asset"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
         <rdfs:label>Organisation</rdfs:label>
         <rdfs:label>OrganisationAsset</rdfs:label>
     </owl:Class>
@@ -2009,7 +2005,6 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
 
     <owl:Class rdf:about="https://schema.org/Person">
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Asset"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
         <rdfs:label>Person</rdfs:label>
         <rdfs:label>PersonAsset</rdfs:label>
     </owl:Class>
@@ -2040,8 +2035,7 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <!-- https://schema.org/VideoGame -->
 
     <owl:Class rdf:about="https://schema.org/VideoGame">
-        <owl:equivalentClass rdf:resource="https://w3id.org/media/dma#Game"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#ExternalConcepts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
         <rdfs:label>VideoGame</rdfs:label>
     </owl:Class>
     
@@ -2102,24 +2096,6 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <owl:Class rdf:about="https://w3id.org/media/dma#Extension">
         <rdfs:comment xml:lang="en">Extension describes specific classes for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM (http://samproject.net)</rdfs:comment>
         <rdfs:label>Extension</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/media/dma#ExternalConcepts -->
-
-    <owl:Class rdf:about="https://w3id.org/media/dma#ExternalConcepts">
-        <rdfs:comment xml:lang="en">Class concept coming from an external source or ontology</rdfs:comment>
-        <rdfs:label>ExternalConcepts</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/media/dma#Game -->
-
-    <owl:Class rdf:about="https://w3id.org/media/dma#Game">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
-        <rdfs:label>Game</rdfs:label>
     </owl:Class>
     
 
@@ -2185,15 +2161,6 @@ In case of machine systems they can be symbols for coding, like: Java, C, etc.</
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
         <rdfs:comment xml:lang="en">This represents information about basic and advanced asset linking and compositions.</rdfs:comment>
         <rdfs:label>LinkingExtension</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/media/dma#Music -->
-
-    <owl:Class rdf:about="https://w3id.org/media/dma#Music">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Product"/>
-        <rdfs:label>Music</rdfs:label>
     </owl:Class>
     
 
