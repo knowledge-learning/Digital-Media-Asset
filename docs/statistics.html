@@ -199,7 +199,7 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html"><code style="font-size: 115%;">Digital Media Asset</code></a></li>
+        <li ><a href="index.html"><code style="font-size: 115%;">Digital Media Asset</code></a></li>
         
 
        
@@ -214,7 +214,7 @@
         
         
         
-        <li  ><a href="statistics.html">Statistics</a></li>
+        <li class="active" ><a href="statistics.html">Statistics</a></li>
 
 
 
@@ -679,14 +679,22 @@
 	
 
 
+
     
         
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li class="active">
-    Home
+  <li>
+    <a href="index.html">Home</a>
   </li>
+  <li class="active">
+        Statistics
+    </li>
 </ol>
 
 
@@ -738,17 +746,14 @@
 
 
 
-
-
-
-
     
+
 
 
 
         <div class="page-header">
 
-            <h3>Home
+            <h3>Statistics
 
             </h3>
 
@@ -762,165 +767,55 @@
         
         <div class="col-md-6">
 
-           
 
-           
+            <div class="row"><div class="col-md-12">
+                <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Entity Types</h3>
+              </div>
+              <div class="panel-body">
 
-           <div class="row"><div class="col-md-12">
-              <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Ontology Metadata</h3>
+
+                  <div class="row">
+
+
+                      <div class="col-md-12 ">
+                          <br />
+                          <canvas id="entitiesBarChart" ></canvas>
+                      </div>
+
+
+
+                  </div>
+
+
+              </div>
             </div>
-            <div class="panel-body">
-              
-              <dl>
-                <dt>URI</dt>
-                <dd><code>https://w3id.org/media/dma</code></dd>
-              </dl>
-                
-                    <dl>
-                        
-                            <dt>ONTOLegolang_UAge:numberOfClasses</dt>
-                            <dd>35</dd>
-                        
-                            <dt>ONTOLegolang_UAge:numberOfDataProperties</dt>
-                            <dd>93</dd>
-                        
-                            <dt>ONTOLegolang_UAge:numberOfObjectProperties</dt>
-                            <dd>49</dd>
-                        
-                            <dt>dbp:contactInfo</dt>
-                            <dd>http://gplsi.dlsi.ua.es</dd>
-                        
-                            
-                            <dd>ygutierrez[at]dlsi.ua.es, dtomas[at]dlsi.ua.es, imoreno[at]dlsi.ua.es, ameny[at]mail.ntua.gr, alps[at]mail.ntua.gr</dd>
-                        
-                            <dt>dbp:copyright</dt>
-                            <dd>Copyright © 2016 by Information Systems and Language Processing Workgroup
-All rights reserved.</dd>
-                        
-                            <dt>dc:date</dt>
-                            <dd>2016-05-01T10:00:00</dd>
-                        
-                            <dt>dcterms:dateCopyrighted</dt>
-                            <dd>2016-05-01T10:00:00</dd>
-                        
-                            <dt>dcterms:license</dt>
-                            <dd>Creative Commons Attribution 4.0 International License</dd>
-                        
-                            <dt>owl:versionIRI</dt>
-                            <dd>https://w3id.org/media/dma/1.0</dd>
-                        
-                            <dt>owl:versionInfo</dt>
-                            <dd>1.0</dd>
-                        
-                            <dt>rdf:type</dt>
-                            <dd>http://www.w3.org/2002/07/owl#Ontology</dd>
-                        
-                            <dt>rdfs:comment</dt>
-                            <dd>This ontology aims to provide a web semantic standard for representing Digital Media Assets or simply Assets. Digital Media Assets covered by this ontology ranges from Product Assets (like Album, Movie, Game and Book) to the representation of Person and Organisation Assets. It allows to link those products with real contributors and/or enterprises.</dd>
-                        
-                            <dt>rdfs:label</dt>
-                            <dd>Digital Media Asset</dd>
-                        
-                    </dl>
-                
-            </div>
-          </div>
-           </div></div>
-           
-        
+             </div></div>
 
 
-           <div class="row"><div class="col-md-12">
-              <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Metrics</h3>
-            </div>
-            <div class="panel-body">
-                <dl>
 
-                 
 
-                  
 
-                      <dt>Ontologies</dt>
-                      <dd>1</dd>
+              <div class="row"><div class="col-md-12">
+                 <div class="panel panel-default">
+               <div class="panel-heading">
+                 <h3 class="panel-title">Triples</h3>
+               </div>
+               <div class="panel-body">
 
-                  
+                   <div class="col-sm-3 col-md-3 ">
+                       <p id="chartsLegend">
+                           <span class="text-muted" style="text-transform: uppercase;">Triples</span>
+                           <br /><span style="font-size: 250%;"> 1078</span>
+                       </p>
+                   </div>
 
-                    
+   	        	<canvas id="triplesStats" ></canvas>
 
-                  
-
-                      <dt>Triples</dt>
-                      <dd>1078</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Classes</dt>
-                      <dd>35</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Properties</dt>
-                      <dd>156</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Annotation Properties</dt>
-                      <dd>14</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Object Properties</dt>
-                      <dd>49</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Datatype Properties</dt>
-                      <dd>93</dd>
-
-                  
-
-                    
-
-                  
-
-                      
-
-                  
-
-                    
-
-                  
-
-                    
-
-                </dl>
-            </div>
-          </div>
-           </div></div>
+               </div>
+             </div>
+              </div></div>
 
 
 
@@ -933,116 +828,45 @@ All rights reserved.</dd>
         <div class="col-md-6">
 
 
-          
-            <div class="row">
-              <div class="col-md-12">
-                <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Namespaces</h3>
-              </div>
-              <div class="panel-body" style="overflow: auto;">
-                 <dl class="-dl-horizontal" style="--margin-left: -100px;">
 
-                 
-                     <dt><span class="label label-info">:</span></dt>
-                     <dd><a href="https://w3id.org/media/dma#" target="_blank">https://w3id.org/media/dma#</a></dd>
 
-                 
-                     <dt><span class="label label-info">ONTOLegolang_UAge</span></dt>
-                     <dd><a href="https://w3id.org/nlp/ONTOLegolang_UAge#" target="_blank">https://w3id.org/nlp/ONTOLegolang_UAge#</a></dd>
-
-                 
-                     <dt><span class="label label-info">dbp</span></dt>
-                     <dd><a href="http://dbpedia.org/property/" target="_blank">http://dbpedia.org/property/</a></dd>
-
-                 
-                     <dt><span class="label label-info">dc</span></dt>
-                     <dd><a href="http://purl.org/dc/elements/1.1/" target="_blank">http://purl.org/dc/elements/1.1/</a></dd>
-
-                 
-                     <dt><span class="label label-info">dcterms</span></dt>
-                     <dd><a href="http://purl.org/dc/terms/" target="_blank">http://purl.org/dc/terms/</a></dd>
-
-                 
-                     <dt><span class="label label-info">dpo</span></dt>
-                     <dd><a href="http://dbpedia.org/ontology/" target="_blank">http://dbpedia.org/ontology/</a></dd>
-
-                 
-                     <dt><span class="label label-info">edm</span></dt>
-                     <dd><a href="http://www.europeana.eu/schemas/edm#" target="_blank">http://www.europeana.eu/schemas/edm#</a></dd>
-
-                 
-                     <dt><span class="label label-info">owl</span></dt>
-                     <dd><a href="http://www.w3.org/2002/07/owl#" target="_blank">http://www.w3.org/2002/07/owl#</a></dd>
-
-                 
-                     <dt><span class="label label-info">protege</span></dt>
-                     <dd><a href="http://protege.stanford.edu/plugins/owl/protege#" target="_blank">http://protege.stanford.edu/plugins/owl/protege#</a></dd>
-
-                 
-                     <dt><span class="label label-info">purl</span></dt>
-                     <dd><a href="http://purl.org/ontology/po/" target="_blank">http://purl.org/ontology/po/</a></dd>
-
-                 
-                     <dt><span class="label label-info">rdf</span></dt>
-                     <dd><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" target="_blank">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></dd>
-
-                 
-                     <dt><span class="label label-info">rdfs</span></dt>
-                     <dd><a href="http://www.w3.org/2000/01/rdf-schema#" target="_blank">http://www.w3.org/2000/01/rdf-schema#</a></dd>
-
-                 
-                     <dt><span class="label label-info">rdvocab</span></dt>
-                     <dd><a href="http://rdvocab.info/ElementsGr2/" target="_blank">http://rdvocab.info/ElementsGr2/</a></dd>
-
-                 
-                     <dt><span class="label label-info">schema</span></dt>
-                     <dd><a href="https://schema.org/" target="_blank">https://schema.org/</a></dd>
-
-                 
-                     <dt><span class="label label-info">sh</span></dt>
-                     <dd><a href="http://www.w3.org/ns/shacl#" target="_blank">http://www.w3.org/ns/shacl#</a></dd>
-
-                 
-                     <dt><span class="label label-info">skos</span></dt>
-                     <dd><a href="http://www.w3.org/2004/02/skos/core#" target="_blank">http://www.w3.org/2004/02/skos/core#</a></dd>
-
-                 
-                     <dt><span class="label label-info">swrl</span></dt>
-                     <dd><a href="http://www.w3.org/2003/11/swrl#" target="_blank">http://www.w3.org/2003/11/swrl#</a></dd>
-
-                 
-                     <dt><span class="label label-info">swrlb</span></dt>
-                     <dd><a href="http://www.w3.org/2003/11/swrlb#" target="_blank">http://www.w3.org/2003/11/swrlb#</a></dd>
-
-                 
-                     <dt><span class="label label-info">vann</span></dt>
-                     <dd><a href="http://purl.org/vocab/vann/" target="_blank">http://purl.org/vocab/vann/</a></dd>
-
-                 
-                     <dt><span class="label label-info">void</span></dt>
-                     <dd><a href="http://rdfs.org/ns/void#" target="_blank">http://rdfs.org/ns/void#</a></dd>
-
-                 
-                     <dt><span class="label label-info">xml</span></dt>
-                     <dd><a href="http://www.w3.org/XML/1998/namespace" target="_blank">http://www.w3.org/XML/1998/namespace</a></dd>
-
-                 
-                     <dt><span class="label label-info">xsd</span></dt>
-                     <dd><a href="http://www.w3.org/2001/XMLSchema#" target="_blank">http://www.w3.org/2001/XMLSchema#</a></dd>
-
-                 
-                     <dt><span class="label label-info">xsp</span></dt>
-                     <dd><a href="http://www.owl-ontologies.com/2005/08/07/xsp.owl#" target="_blank">http://www.owl-ontologies.com/2005/08/07/xsp.owl#</a></dd>
-
-                 
-
-                </dl>
-              </div>
+        
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Top Classes</h3>
             </div>
-              </div>
+            <div class="panel-body">
+
+                <div class="row">
+
+
+                    <div class="col-md-12 ">
+
+                        <span class="text-muted">NOTE: size = number of sub-classes</span>
+                        <br />
+                        <canvas id="toplayerChart" ></canvas>
+
+
+                    </div>
+
+
+
+                </div>
+
             </div>
-            
+          </div>
+          </div></div>
+        
+
+
+
+
+        
+
+
+
+
         </div>
          
 
@@ -1131,6 +955,277 @@ $('#search-input-sidebar').keyup(function() {
 
 
 
+
+
+
+<script type="text/javascript">
+
+    // utility to assign colors dynamically at js level
+
+    function getColor(i) {
+        var colors = [["#F7464A", "#FF5A5E"],    // color , highlightColor
+                       ["#46BFBD", "#5AD3D1"],
+                       ["#FDB45C", "#FFC870"],
+                       ["#6588A8", "#CCD3FF"],
+                       ["#6960EC", "#736AFF"],
+                       ["#FFA62F", "#FBB917"],
+                       ["#7D0552", "#7E354D"],
+                       ["#FDB45C", "#FFC870"],
+                        ];
+        return colors[i]
+    }
+
+
+
+// FIRST CHART : types of entities
+
+
+	var ctx = document.getElementById("entitiesBarChart").getContext("2d");
+
+    var data = {
+    // labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: [
+             
+                
+            
+                
+            
+                "Classes"
+                     , 
+                
+            
+                "Properties"
+                     , 
+                
+            
+                "Annotation Properties"
+                     , 
+                
+            
+                "Object Properties"
+                     , 
+                
+            
+                "Datatype Properties"
+                     , 
+                
+            
+                "Skos Concepts"
+                     , 
+                
+            
+                "Data Shapes"
+                     , 
+                
+            
+                
+            
+    ],
+    datasets: [
+        {
+            label: "Entities Count",
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+          // data: [65, 59, 80, 81, 56, 55, 40],
+            data: [
+             
+                
+            
+                
+            
+                35
+                     , 
+                
+            
+                154
+                     , 
+                
+            
+                14
+                     , 
+                
+            
+                48
+                     , 
+                
+            
+                92
+                     , 
+                
+            
+                0
+                     , 
+                
+            
+                0
+                     , 
+                
+            
+                
+            
+                 ],
+            }
+        ]
+        };
+
+    var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: {
+        legend: {
+            display: false,
+        }
+        }
+    });
+
+
+
+
+// SECOND CHART : top layer Classes
+
+	
+
+    var ctx2 = document.getElementById("toplayerChart").getContext("2d");
+
+    var data2 = {
+            datasets: [{
+                data: [
+                    11, 
+                    9, 
+                    15
+                    
+                ],
+                backgroundColor: [
+                  // navy
+                  "#000080",
+                  // blue
+                  "#0000FF",
+                  // teal
+                  "#008080",
+                  // aqua
+                  "#00FFFF",
+                    // maroon
+                    "#800000",
+                    // red
+                    "#FF0000",
+                    // purple
+                    "#800080",
+                    // fuchsia
+                    "#FF00FF",
+                    // green
+                    "#008000",
+                    // lime
+                    "#00FF00",
+                    // olive
+                    "#808000",
+                    // yellow
+                    "#FFFF00",
+                    // black
+                    "#000000",
+                    // silver
+                    "#C0C0C0",
+                    // gray
+                    "#808080",
+                    // white
+                    "#FFFFFF"
+                  ],
+                label: 'Top Layer' // for legend
+            }],
+            labels: [
+                "Asset", 
+                "Extension", 
+                "Nomenclature"
+                
+            ]
+        };
+    var myPolarChart = new Chart(ctx2, {
+    type: 'polarArea',
+    data: data2,
+    options: {
+        legend: {
+            display: true,
+        }
+        }
+    });
+
+    
+
+
+
+
+// SECOND CHART : top layer SKOS
+
+
+
+
+
+
+
+
+// THIRD CHART: triples
+
+	var ctxTriples = document.getElementById("triplesStats").getContext("2d");
+	var dataTriples = {
+    labels: ["Triples"],
+    datasets: [
+                {
+                    label: "Triples Count",
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255,99,132,1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1,
+                    data: [1078],
+                }
+            ]
+        };
+
+    var myBarChart = new Chart(ctxTriples, {
+    type: 'bar',
+    data: dataTriples,
+    options: {
+        legend: {
+            display: false,
+            },
+        scales: {
+            yAxes: [{
+                stacked: true
+            }]
+        }
+        }
+    });
+
+
+
+
+</script>
 
 
 

@@ -1,0 +1,1534 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="static/libs/img/favicon.ico">
+
+	
+		<title>OntoDocs > Digital Media Asset</title>
+	
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="static/libs/bootstrap-3_3_7-dist/css/bootstrap.min.css" rel="stylesheet">  -->
+    <!-- Bootswatch:  -->
+    <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
+    <link href="static/libs/bootswatch3_2/simplex/bootstrap.min.css" rel="stylesheet">
+    <link href="static/custom/css/simple-sidebar.css" rel="stylesheet">
+    <link href="static/custom/css/familytree.css" rel="stylesheet">
+    <link href="static/custom/css/tabletree.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="static/libs/bootstrap-3_3_7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/custom/css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+
+  .lead-plus {font-size: 26.5px;}
+  .label-xs {font-size: 10px;}
+  .label-dark {background: #2c3e50; color: white; padding: 1px;}
+  .margin50 {margin-top: 50px; margin-bottom: 50px;}
+
+  .namespaces {background: #ced2d6; width: 100%;}
+
+
+  /*so that the d3plus tooltip panel doesnt cover the top banner*/
+  .navbar {z-index: 3000;}
+
+
+  .panel-body dt {margin-top: 5px;}
+  .page-header  {margin-top: 30px;}
+  #wrapper {margin-top: 50px;}
+
+  .implementation-panel {
+    overflow: auto;
+    /*max-height: 500px;*/
+  }
+
+  tr.table-classproperties {
+      /*background: #f5f5f5;*/
+  }
+  tr.table-classproperties th {
+      font-size: 80%;
+      font-weight: normal;
+  }
+
+
+  tr.table-inheritanceinfo {
+      /*background: #f5f5f5;*/
+      text-align: left;
+  }
+
+  tr.table-inheritanceinfo th {
+      font-size: 90%;
+      font-weight: normal;
+  }
+
+
+  .breadcrumb {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .breadcrumb a {
+      text-transform: capitalize;
+  }
+  .breadcrumb li {
+      text-transform: none;
+      /*so to catch the uri @todo improve*/
+  }
+
+
+  .fromclass_link {
+    /*color: white;
+    text-decoration: underline;*/
+    /*background: #1c1e52;*/
+    color: inherit;
+    /*padding: 1px;*/
+  }
+
+		.mythumbnail {
+			display: block;
+			padding: 13px;
+			margin-bottom: 30px;
+			line-height: 13.428571;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 30px;
+		}
+
+		.mythumbnail:hover {
+			background: lightyellow;
+			text-decoration: none;
+		}
+
+
+		.img-container{
+		    height:100%;
+			overflow: hidden;
+		    max-height:200px;
+			padding: 10px;
+/*			margin: 20px 0px 20px 0px;*/
+			border: 1em #EAE5E5 solid;
+		}
+
+		.img-container:hover {
+			border: 1px grey solid;
+		}
+
+		img{
+/*		    height:100% !important;*/
+		}
+
+
+		.icon-xxs {
+			font-size: 15px;
+		}
+
+
+    /* dropdown open on hover */
+
+    @media (min-width: 979px) {
+      ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+      }
+    }
+
+
+
+/*pygments css*/
+
+
+/*overloading this class from pygments*/
+.highlight {
+  overflow: auto;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+  </head>
+
+  <body>
+
+
+
+  
+      
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" id="menu-toggle" title="Toggle sidebar">
+        
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html"><code style="font-size: 115%;">Digital Media Asset</code></a></li>
+        
+
+       
+
+
+        <li  ><a href="entities-az.html">Entities A-Z</a></li>
+        
+        <li ><a href="entities-tree-classes.html">Classes</a></li>
+        
+        
+        <li class="active"><a href="entities-tree-properties.html">Properties</a></li>
+        
+        
+        
+        <li  ><a href="statistics.html">Statistics</a></li>
+
+
+
+
+
+      </ul>
+      
+    </div><!--/.nav-collapse -->
+
+  </div>
+</nav>
+
+  
+
+
+
+
+
+
+
+
+
+<div id="wrapper" class="toggled">
+
+
+    
+
+    
+        
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+
+
+        <li>
+          <input style="margin-top: 30px;  margin-bottom: 20px;" type="text" id="search-input-sidebar" name="" value="" placeholder="Type to search">
+        </li>
+
+        
+          <li class="-second-level" id="sd_classes"><a href="entities-tree-classes.html">Classes (35)</a>
+          </li>
+
+            
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_15"><a  href="class-dmaasset.html">dma:Asset</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_16"><a  href="class-dmaassettype.html">dma:AssetType</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_17"><a  href="class-dmacharacter.html">dma:Character</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_18"><a  href="class-dmacontentrating.html">dma:ContentRating</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_19"><a  href="class-dmaencodingformat.html">dma:EncodingFormat</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_20"><a  href="class-dmaextension.html">dma:Extension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_21"><a  href="class-dmagender.html">dma:Gender</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_22"><a  href="class-dmagenericextension.html">dma:GenericExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_23"><a  href="class-dmagenre.html">dma:Genre</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_24"><a  href="class-dmalanguage.html">dma:Language</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_25"><a  href="class-dmalicense.html">dma:License</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_26"><a  href="class-dmalinkingextension.html">dma:LinkingExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_27"><a  href="class-dmanomenclature.html">dma:Nomenclature</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_28"><a  href="class-dmaownerextension.html">dma:OwnerExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_29"><a  href="class-dmasemanticextension.html">dma:SemanticExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_30"><a  href="class-dmasocialmediaextension.html">dma:SocialMediaExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a  href="class-dmasourcetype.html">dma:SourceType</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_32"><a  href="class-dmastatus.html">dma:Status</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_33"><a  href="class-dmasyndicationextension.html">dma:SyndicationExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_34"><a  href="class-dmatheme.html">dma:Theme</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_35"><a  href="class-dmavoicecontrolextension.html">dma:VoiceControlExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_36"><a  href="class-dmawidget.html">dma:Widget</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_2"><a  href="class-dpofictionalcharacter.html">dpo:FictionalCharacter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_3"><a  href="class-dpoprofession.html">dpo:Profession</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_4"><a  href="class-schemabook.html">schema:Book</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_5"><a  href="class-schemacountry.html">schema:Country</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_6"><a  href="class-schemamovie.html">schema:Movie</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_7"><a  href="class-schemamusicalbum.html">schema:MusicAlbum</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_8"><a  href="class-schemamusicrecording.html">schema:MusicRecording</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_9"><a  href="class-schemaorganization.html">schema:Organization</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_10"><a  href="class-schemaperson.html">schema:Person</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_11"><a  href="class-schemaplace.html">schema:Place</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_12"><a  href="class-schemapostaladdressextension.html">schema:PostalAddressExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_13"><a  href="class-schemaproduct.html">schema:Product</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_14"><a  href="class-schemavideogame.html">schema:VideoGame</a></li>
+          
+        
+
+        
+            <li class="-second-level" id="sd_properties"><a class="active" href="entities-tree-properties.html">Properties (154)</a>
+            </li>
+
+            
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_48"><a   href="prop-ontolegolang_uagenumberofclasses.html">ONTOLegolang_UAge:numberOfClasses</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_49"><a   href="prop-ontolegolang_uagenumberofdataproperties.html">ONTOLegolang_UAge:numberOfDataProperties</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_50"><a   href="prop-ontolegolang_uagenumberofobjectproperties.html">ONTOLegolang_UAge:numberOfObjectProperties</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_162"><a   href="prop-dbpadaptation.html">dbp:adaptation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_39"><a   href="prop-dbpcontactinfo.html">dbp:contactInfo</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_40"><a   href="prop-dbpcopyright.html">dbp:copyright</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_41"><a   href="prop-dbpexample.html">dbp:example</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_163"><a   href="prop-dccreator.html">dc:creator</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_42"><a   href="prop-dcdate.html">dc:date</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_52"><a   href="prop-dcdescription.html">dc:description</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_143"><a   href="prop-dclanguage.html">dc:language</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_53"><a   href="prop-dctitle.html">dc:title</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_43"><a   href="prop-dctermsdatecopyrighted.html">dcterms:dateCopyrighted</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_54"><a   href="prop-dctermsissued.html">dcterms:issued</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_44"><a   href="prop-dctermslanguage.html">dcterms:language</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_45"><a   href="prop-dctermslicense.html">dcterms:license</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_55"><a   href="prop-dctermsprovenanceprice.html">dcterms:provenance#price</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_56"><a   href="prop-dctermsprovenancetargettitle.html">dcterms:provenance#targetTitle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_57"><a   href="prop-dctermsprovenancetargettype.html">dcterms:provenance#targetType</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_93"><a   href="prop-dmaaccessories.html">dma:accessories</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_94"><a   href="prop-dmaassetdataproperty.html">dma:assetDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_174"><a   href="prop-dmaassetobjectproperty.html">dma:assetObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_95"><a   href="prop-dmabarcode.html">dma:barcode</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_96"><a   href="prop-dmabic.html">dma:bic</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_97"><a   href="prop-dmabookdataproperty.html">dma:bookDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_175"><a   href="prop-dmabookobjectproperty.html">dma:bookObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_98"><a   href="prop-dmacataloguenumber.html">dma:catalogueNumber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_99"><a   href="prop-dmacopyright.html">dma:copyright</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_100"><a   href="prop-dmacreationdate.html">dma:creationDate</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_101"><a   href="prop-dmadewey.html">dma:dewey</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_102"><a   href="prop-dmadigitalidentifier.html">dma:digitalIdentifier</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_103"><a   href="prop-dmadynamiccommunity.html">dma:dynamicCommunity</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_104"><a   href="prop-dmaetag.html">dma:eTag</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_105"><a   href="prop-dmaedinumber.html">dma:ediNumber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_106"><a   href="prop-dmaedition.html">dma:edition</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_107"><a   href="prop-dmaexvatprice.html">dma:exVatPrice</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_176"><a   href="prop-dmaextension.html">dma:extension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_108"><a   href="prop-dmaextensionkey.html">dma:extensionKey</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_109"><a   href="prop-dmaextentionvalue.html">dma:extentionValue</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_110"><a   href="prop-dmaexternalterms.html">dma:externalTerms</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_111"><a   href="prop-dmagamedataproperty.html">dma:gameDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_177"><a   href="prop-dmagameobjectproperty.html">dma:gameObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_178"><a   href="prop-dmagenericextension.html">dma:genericExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_112"><a   href="prop-dmagenericextensiondataproperty.html">dma:genericExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_113"><a   href="prop-dmagrammar.html">dma:grammar</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_114"><a   href="prop-dmaidentifier.html">dma:identifier</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_115"><a   href="prop-dmalastupdated.html">dma:lastUpdated</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_116"><a   href="prop-dmalc.html">dma:lc</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_117"><a   href="prop-dmalinkend.html">dma:linkEnd</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_118"><a   href="prop-dmalinkstart.html">dma:linkStart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_179"><a   href="prop-dmalinkingextension.html">dma:linkingExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_119"><a   href="prop-dmalinkingextensiondataproperty.html">dma:linkingExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_120"><a   href="prop-dmamoviedataproperty.html">dma:movieDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_180"><a   href="prop-dmamovieobjectproperty.html">dma:movieObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_121"><a   href="prop-dmamusicdataproperty.html">dma:musicDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_181"><a   href="prop-dmamusicobjectproperty.html">dma:musicObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_122"><a   href="prop-dmanomenclaturedataproperty.html">dma:nomenclatureDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_182"><a   href="prop-dmanomenclatureobjectproperty.html">dma:nomenclatureObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_123"><a   href="prop-dmanumplayers.html">dma:numPlayers</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_154"><a   href="prop-dmaowner.html">dma:owner</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_183"><a   href="prop-dmaownerextension.html">dma:ownerExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_124"><a   href="prop-dmaownerextentiondataproperty.html">dma:ownerExtentionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_125"><a   href="prop-dmapersondataproperty.html">dma:personDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_184"><a   href="prop-dmapersonobjectproperty.html">dma:personObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_126"><a   href="prop-dmapostaladdress.html">dma:postalAddress</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_127"><a   href="prop-dmaproductdataproperty.html">dma:productDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_185"><a   href="prop-dmaproductobjectproperty.html">dma:productObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_155"><a   href="prop-dmapubcountry.html">dma:pubCountry</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_186"><a   href="prop-dmarecording.html">dma:recording</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_128"><a   href="prop-dmareferencenumber.html">dma:referenceNumber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_187"><a   href="prop-dmarelatedasset.html">dma:relatedAsset</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_129"><a   href="prop-dmarelateddbpedia.html">dma:relatedDbpedia</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_130"><a   href="prop-dmascreenshots.html">dma:screenshots</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_156"><a   href="prop-dmasemanticextension.html">dma:semanticExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_131"><a   href="prop-dmasemanticextensiondataproperty.html">dma:semanticExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_132"><a   href="prop-dmaseriespart.html">dma:seriesPart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_188"><a   href="prop-dmasocialmediaextension.html">dma:socialMediaExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_133"><a   href="prop-dmasocialmediaextensiondataproperty.html">dma:socialMediaExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_134"><a   href="prop-dmasourceelement.html">dma:sourceElement</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_157"><a   href="prop-dmasourcetype.html">dma:sourceType</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_135"><a   href="prop-dmasourcevalue.html">dma:sourceValue</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_189"><a   href="prop-dmasyndicationextension.html">dma:syndicationExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_136"><a   href="prop-dmasyndicationextensiondataproperty.html">dma:syndicationExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_137"><a   href="prop-dmatargetelement.html">dma:targetElement</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_138"><a   href="prop-dmatargetid.html">dma:targetId</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_158"><a   href="prop-dmatheme.html">dma:theme</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_139"><a   href="prop-dmatrackdp.html">dma:trackDp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_140"><a   href="prop-dmatrackisrc.html">dma:trackISRC</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_190"><a   href="prop-dmatrackop.html">dma:trackOp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_141"><a   href="prop-dmavatprice.html">dma:vatPrice</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_159"><a   href="prop-dmavoicecontrolextension.html">dma:voiceControlExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_142"><a   href="prop-dmavoicecontrolextensiondataproperty.html">dma:voiceControlExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_160"><a   href="prop-dmawidget.html">dma:widget</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_37"><a   href="prop-dpoabstract.html">dpo:abstract</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_161"><a   href="prop-dpobasedon.html">dpo:basedOn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_51"><a   href="prop-dponotes.html">dpo:notes</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_38"><a   href="prop-dporole.html">dpo:role</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_46"><a   href="prop-owlannotatedsource.html">owl:annotatedSource</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_47"><a   href="prop-owlannotatedtarget.html">owl:annotatedTarget</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_58"><a   href="prop-purlseries.html">purl:series</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_59"><a   href="prop-rdvocabdateofbirth.html">rdvocab:dateOfBirth</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_60"><a   href="prop-rdvocabdateofdeath.html">rdvocab:dateOfDeath</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_144"><a   href="prop-rdvocabgender.html">rdvocab:gender</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_164"><a   href="prop-rdvocabprofessionoroccupation.html">rdvocab:professionOrOccupation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_61"><a   href="prop-schemareviewreviewbody.html">schema:Review/reviewBody</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_145"><a   href="prop-schemaaddress.html">schema:address</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_146"><a   href="prop-schemaaddresscountry.html">schema:addressCountry</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_62"><a   href="prop-schemaaddresslocality.html">schema:addressLocality</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_165"><a   href="prop-schemaaffiliation.html">schema:affiliation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_63"><a   href="prop-schemaalternatename.html">schema:alternateName</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_166"><a   href="prop-schemaauthor.html">schema:author</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_64"><a   href="prop-schemaawards.html">schema:awards</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_147"><a   href="prop-schemabirthplace.html">schema:birthPlace</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_65"><a   href="prop-schemabookedition.html">schema:bookEdition</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_66"><a   href="prop-schemacommenttext.html">schema:commentText</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_148"><a   href="prop-schemacontentrating.html">schema:contentRating</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_167"><a   href="prop-schemacontributor.html">schema:contributor</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_67"><a   href="prop-schemadatepublished.html">schema:datePublished</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_149"><a   href="prop-schemadeathplace.html">schema:deathPlace</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_68"><a   href="prop-schemaduration.html">schema:duration</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_69"><a   href="prop-schemaemail.html">schema:email</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_150"><a   href="prop-schemaencodingformat.html">schema:encodingFormat</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_70"><a   href="prop-schemafamilyname.html">schema:familyName</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_71"><a   href="prop-schemafaxnumber.html">schema:faxNumber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_72"><a   href="prop-schemagameplatform.html">schema:gamePlatform</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_168"><a   href="prop-schemagenre.html">schema:genre</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_73"><a   href="prop-schemagivenname.html">schema:givenName</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_74"><a   href="prop-schemaimage.html">schema:image</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_75"><a   href="prop-schemaisbn.html">schema:isbn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_76"><a   href="prop-schemakeywords.html">schema:keywords</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_151"><a   href="prop-schemalicense.html">schema:license</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_169"><a   href="prop-schemanationality.html">schema:nationality</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_77"><a   href="prop-schemanumtracks.html">schema:numTracks</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_78"><a   href="prop-schemanumberofitems.html">schema:numberOfItems</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_79"><a   href="prop-schemanumberofpages.html">schema:numberOfPages</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_80"><a   href="prop-schemaposition.html">schema:position</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_81"><a   href="prop-schemapostalcode.html">schema:postalCode</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_152"><a   href="prop-schemapublisher.html">schema:publisher</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_82"><a   href="prop-schemaratingvalue.html">schema:ratingValue</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_83"><a   href="prop-schemarequiredminage.html">schema:requiredMinAge</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_170"><a   href="prop-schemasameas.html">schema:sameAs</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_153"><a   href="prop-schemastatus.html">schema:status</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_84"><a   href="prop-schemastreetaddress.html">schema:streetAddress</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_171"><a   href="prop-schemasubtitlelanguage.html">schema:subtitleLanguage</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_85"><a   href="prop-schematelephone.html">schema:telephone</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_86"><a   href="prop-schematext.html">schema:text</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_87"><a   href="prop-schematitle.html">schema:title</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_172"><a   href="prop-schematrack.html">schema:track</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_173"><a   href="prop-schematrailer.html">schema:trailer</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_88"><a   href="prop-schematypicalagerange.html">schema:typicalAgeRange</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_89"><a   href="prop-schemaurl.html">schema:url</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_90"><a   href="prop-schemavalidfrom.html">schema:validFrom</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_91"><a   href="prop-schemavaliduntil.html">schema:validUntil</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_92"><a   href="prop-schemavalue.html">schema:value</a></li>
+          
+
+        
+
+        
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+    </ul>
+
+</div>
+
+
+<!-- /#sidebar-wrapper -->
+
+    
+
+
+
+
+    <!-- Begin page content -->
+    <div class="container" id="page-content-wrapper">
+
+      
+
+	
+
+
+
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+        <a href="entities-az.html">Entities</a>
+    </li>
+    <li class="active">
+          Properties
+      </li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+  <div class="page-header">
+
+      <h3>Properties Tree
+      </h3>
+      <input id="search-input" type="text" class="form-control" placeholder="Filter...">
+
+  </div>
+
+
+
+     <div class="row"><div class="col-md-12">
+        <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Tree</h3>
+      </div>
+      <div class="panel-body entities-list">
+
+          <table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/nlp/ONTOLegolang_UAge#numberOfClasses" class="treelinks" href="prop-ontolegolang_uagenumberofclasses.html">ONTOLegolang_UAge:numberOfClasses</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/nlp/ONTOLegolang_UAge#numberOfDataProperties" class="treelinks" href="prop-ontolegolang_uagenumberofdataproperties.html">ONTOLegolang_UAge:numberOfDataProperties</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/nlp/ONTOLegolang_UAge#numberOfObjectProperties" class="treelinks" href="prop-ontolegolang_uagenumberofobjectproperties.html">ONTOLegolang_UAge:numberOfObjectProperties</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/property/contactInfo" class="treelinks" href="prop-dbpcontactinfo.html">dbp:contactInfo</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/property/copyright" class="treelinks" href="prop-dbpcopyright.html">dbp:copyright</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/property/example" class="treelinks" href="prop-dbpexample.html">dbp:example</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/elements/1.1/date" class="treelinks" href="prop-dcdate.html">dc:date</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/dateCopyrighted" class="treelinks" href="prop-dctermsdatecopyrighted.html">dcterms:dateCopyrighted</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/language" class="treelinks" href="prop-dctermslanguage.html">dcterms:language</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/license" class="treelinks" href="prop-dctermslicense.html">dcterms:license</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#assetDataProperty" class="treelinks" href="prop-dmaassetdataproperty.html">dma:assetDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/elements/1.1/description" class="treelinks" href="prop-dcdescription.html">dc:description</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/provenance#price" class="treelinks" href="prop-dctermsprovenanceprice.html">dcterms:provenance#price</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/alternateName" class="treelinks" href="prop-schemaalternatename.html">schema:alternateName</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/awards" class="treelinks" href="prop-schemaawards.html">schema:awards</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/image" class="treelinks" href="prop-schemaimage.html">schema:image</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/ratingValue" class="treelinks" href="prop-schemaratingvalue.html">schema:ratingValue</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/title" class="treelinks" href="prop-schematitle.html">schema:title</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/url" class="treelinks" href="prop-schemaurl.html">schema:url</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/validFrom" class="treelinks" href="prop-schemavalidfrom.html">schema:validFrom</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/validUntil" class="treelinks" href="prop-schemavaliduntil.html">schema:validUntil</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#copyright" class="treelinks" href="prop-dmacopyright.html">dma:copyright</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#creationDate" class="treelinks" href="prop-dmacreationdate.html">dma:creationDate</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#dynamicCommunity" class="treelinks" href="prop-dmadynamiccommunity.html">dma:dynamicCommunity</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#eTag" class="treelinks" href="prop-dmaetag.html">dma:eTag</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#genericExtensionDataProperty" class="treelinks" href="prop-dmagenericextensiondataproperty.html">dma:genericExtensionDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#extensionKey" class="treelinks" href="prop-dmaextensionkey.html">dma:extensionKey</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#extentionValue" class="treelinks" href="prop-dmaextentionvalue.html">dma:extentionValue</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#identifier" class="treelinks" href="prop-dmaidentifier.html">dma:identifier</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#lastUpdated" class="treelinks" href="prop-dmalastupdated.html">dma:lastUpdated</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#linkingExtensionDataProperty" class="treelinks" href="prop-dmalinkingextensiondataproperty.html">dma:linkingExtensionDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/provenance#targetTitle" class="treelinks" href="prop-dctermsprovenancetargettitle.html">dcterms:provenance#targetTitle</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/provenance#targetType" class="treelinks" href="prop-dctermsprovenancetargettype.html">dcterms:provenance#targetType</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/validUntil" class="treelinks" href="prop-schemavaliduntil.html">schema:validUntil</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#linkEnd" class="treelinks" href="prop-dmalinkend.html">dma:linkEnd</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#linkStart" class="treelinks" href="prop-dmalinkstart.html">dma:linkStart</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#sourceElement" class="treelinks" href="prop-dmasourceelement.html">dma:sourceElement</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#targetElement" class="treelinks" href="prop-dmatargetelement.html">dma:targetElement</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#targetId" class="treelinks" href="prop-dmatargetid.html">dma:targetId</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#ownerExtentionDataProperty" class="treelinks" href="prop-dmaownerextentiondataproperty.html">dma:ownerExtentionDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#extensionKey" class="treelinks" href="prop-dmaextensionkey.html">dma:extensionKey</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#extentionValue" class="treelinks" href="prop-dmaextentionvalue.html">dma:extentionValue</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#screenshots" class="treelinks" href="prop-dmascreenshots.html">dma:screenshots</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#semanticExtensionDataProperty" class="treelinks" href="prop-dmasemanticextensiondataproperty.html">dma:semanticExtensionDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/keywords" class="treelinks" href="prop-schemakeywords.html">schema:keywords</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#relatedDbpedia" class="treelinks" href="prop-dmarelateddbpedia.html">dma:relatedDbpedia</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#socialMediaExtensionDataProperty" class="treelinks" href="prop-dmasocialmediaextensiondataproperty.html">dma:socialMediaExtensionDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/elements/1.1/description" class="treelinks" href="prop-dcdescription.html">dc:description</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/image" class="treelinks" href="prop-schemaimage.html">schema:image</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/url" class="treelinks" href="prop-schemaurl.html">schema:url</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#identifier" class="treelinks" href="prop-dmaidentifier.html">dma:identifier</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#sourceValue" class="treelinks" href="prop-dmasourcevalue.html">dma:sourceValue</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#syndicationExtensionDataProperty" class="treelinks" href="prop-dmasyndicationextensiondataproperty.html">dma:syndicationExtensionDataProperty</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#voiceControlExtensionDataProperty" class="treelinks" href="prop-dmavoicecontrolextensiondataproperty.html">dma:voiceControlExtensionDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#grammar" class="treelinks" href="prop-dmagrammar.html">dma:grammar</a></td>
+						  </tr></table></td>
+							</tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#assetObjectProperty" class="treelinks" href="prop-dmaassetobjectproperty.html">dma:assetObjectProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/addressCountry" class="treelinks" href="prop-schemaaddresscountry.html">schema:addressCountry</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/contentRating" class="treelinks" href="prop-schemacontentrating.html">schema:contentRating</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/license" class="treelinks" href="prop-schemalicense.html">schema:license</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/status" class="treelinks" href="prop-schemastatus.html">schema:status</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#owner" class="treelinks" href="prop-dmaowner.html">dma:owner</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/elements/1.1/creator" class="treelinks" href="prop-dccreator.html">dc:creator</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/genre" class="treelinks" href="prop-schemagenre.html">schema:genre</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/sameAs" class="treelinks" href="prop-schemasameas.html">schema:sameAs</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#extension" class="treelinks" href="prop-dmaextension.html">dma:extension</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#semanticExtension" class="treelinks" href="prop-dmasemanticextension.html">dma:semanticExtension</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#relatedAsset" class="treelinks" href="prop-dmarelatedasset.html">dma:relatedAsset</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#voiceControlExtension" class="treelinks" href="prop-dmavoicecontrolextension.html">dma:voiceControlExtension</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#genericExtension" class="treelinks" href="prop-dmagenericextension.html">dma:genericExtension</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#linkingExtension" class="treelinks" href="prop-dmalinkingextension.html">dma:linkingExtension</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#owner" class="treelinks" href="prop-dmaowner.html">dma:owner</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#theme" class="treelinks" href="prop-dmatheme.html">dma:theme</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#widget" class="treelinks" href="prop-dmawidget.html">dma:widget</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#ownerExtension" class="treelinks" href="prop-dmaownerextension.html">dma:ownerExtension</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#socialMediaExtension" class="treelinks" href="prop-dmasocialmediaextension.html">dma:socialMediaExtension</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#sourceType" class="treelinks" href="prop-dmasourcetype.html">dma:sourceType</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#syndicationExtension" class="treelinks" href="prop-dmasyndicationextension.html">dma:syndicationExtension</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#theme" class="treelinks" href="prop-dmatheme.html">dma:theme</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#widget" class="treelinks" href="prop-dmawidget.html">dma:widget</a></td>
+						  </tr></table></td>
+							</tr></table></td>
+							</tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#externalTerms" class="treelinks" href="prop-dmaexternalterms.html">dma:externalTerms</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/elements/1.1/title" class="treelinks" href="prop-dctitle.html">dc:title</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/bookEdition" class="treelinks" href="prop-schemabookedition.html">schema:bookEdition</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/datePublished" class="treelinks" href="prop-schemadatepublished.html">schema:datePublished</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#nomenclatureDataProperty" class="treelinks" href="prop-dmanomenclaturedataproperty.html">dma:nomenclatureDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/requiredMinAge" class="treelinks" href="prop-schemarequiredminage.html">schema:requiredMinAge</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/title" class="treelinks" href="prop-schematitle.html">schema:title</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/value" class="treelinks" href="prop-schemavalue.html">schema:value</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#eTag" class="treelinks" href="prop-dmaetag.html">dma:eTag</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#nomenclatureObjectProperty" class="treelinks" href="prop-dmanomenclatureobjectproperty.html">dma:nomenclatureObjectProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/elements/1.1/language" class="treelinks" href="prop-dclanguage.html">dc:language</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://rdvocab.info/ElementsGr2/gender" class="treelinks" href="prop-rdvocabgender.html">rdvocab:gender</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/addressCountry" class="treelinks" href="prop-schemaaddresscountry.html">schema:addressCountry</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/birthPlace" class="treelinks" href="prop-schemabirthplace.html">schema:birthPlace</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/contentRating" class="treelinks" href="prop-schemacontentrating.html">schema:contentRating</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/deathPlace" class="treelinks" href="prop-schemadeathplace.html">schema:deathPlace</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/encodingFormat" class="treelinks" href="prop-schemaencodingformat.html">schema:encodingFormat</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/license" class="treelinks" href="prop-schemalicense.html">schema:license</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/status" class="treelinks" href="prop-schemastatus.html">schema:status</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#owner" class="treelinks" href="prop-dmaowner.html">dma:owner</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#pubCountry" class="treelinks" href="prop-dmapubcountry.html">dma:pubCountry</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#sourceType" class="treelinks" href="prop-dmasourcetype.html">dma:sourceType</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#theme" class="treelinks" href="prop-dmatheme.html">dma:theme</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#widget" class="treelinks" href="prop-dmawidget.html">dma:widget</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/genre" class="treelinks" href="prop-schemagenre.html">schema:genre</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/nationality" class="treelinks" href="prop-schemanationality.html">schema:nationality</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#personDataProperty" class="treelinks" href="prop-dmapersondataproperty.html">dma:personDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/notes" class="treelinks" href="prop-dponotes.html">dpo:notes</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://rdvocab.info/ElementsGr2/dateOfBirth" class="treelinks" href="prop-rdvocabdateofbirth.html">rdvocab:dateOfBirth</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://rdvocab.info/ElementsGr2/dateOfDeath" class="treelinks" href="prop-rdvocabdateofdeath.html">rdvocab:dateOfDeath</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/familyName" class="treelinks" href="prop-schemafamilyname.html">schema:familyName</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/givenName" class="treelinks" href="prop-schemagivenname.html">schema:givenName</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#personObjectProperty" class="treelinks" href="prop-dmapersonobjectproperty.html">dma:personObjectProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://rdvocab.info/ElementsGr2/gender" class="treelinks" href="prop-rdvocabgender.html">rdvocab:gender</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/birthPlace" class="treelinks" href="prop-schemabirthplace.html">schema:birthPlace</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/deathPlace" class="treelinks" href="prop-schemadeathplace.html">schema:deathPlace</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://rdvocab.info/ElementsGr2/professionOrOccupation" class="treelinks" href="prop-rdvocabprofessionoroccupation.html">rdvocab:professionOrOccupation</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/affiliation" class="treelinks" href="prop-schemaaffiliation.html">schema:affiliation</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/nationality" class="treelinks" href="prop-schemanationality.html">schema:nationality</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#productDataProperty" class="treelinks" href="prop-dmaproductdataproperty.html">dma:productDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/typicalAgeRange" class="treelinks" href="prop-schematypicalagerange.html">schema:typicalAgeRange</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#bookDataProperty" class="treelinks" href="prop-dmabookdataproperty.html">dma:bookDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/notes" class="treelinks" href="prop-dponotes.html">dpo:notes</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/issued" class="treelinks" href="prop-dctermsissued.html">dcterms:issued</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/ontology/po/series" class="treelinks" href="prop-purlseries.html">purl:series</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/Review/reviewBody" class="treelinks" href="prop-schemareviewreviewbody.html">schema:Review/reviewBody</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/commentText" class="treelinks" href="prop-schemacommenttext.html">schema:commentText</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/isbn" class="treelinks" href="prop-schemaisbn.html">schema:isbn</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/numberOfPages" class="treelinks" href="prop-schemanumberofpages.html">schema:numberOfPages</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/text" class="treelinks" href="prop-schematext.html">schema:text</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#barcode" class="treelinks" href="prop-dmabarcode.html">dma:barcode</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#bic" class="treelinks" href="prop-dmabic.html">dma:bic</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#catalogueNumber" class="treelinks" href="prop-dmacataloguenumber.html">dma:catalogueNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#dewey" class="treelinks" href="prop-dmadewey.html">dma:dewey</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#edition" class="treelinks" href="prop-dmaedition.html">dma:edition</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#exVatPrice" class="treelinks" href="prop-dmaexvatprice.html">dma:exVatPrice</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#lc" class="treelinks" href="prop-dmalc.html">dma:lc</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#postalAddress" class="treelinks" href="prop-dmapostaladdress.html">dma:postalAddress</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/addressLocality" class="treelinks" href="prop-schemaaddresslocality.html">schema:addressLocality</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/email" class="treelinks" href="prop-schemaemail.html">schema:email</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/faxNumber" class="treelinks" href="prop-schemafaxnumber.html">schema:faxNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/postalCode" class="treelinks" href="prop-schemapostalcode.html">schema:postalCode</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/streetAddress" class="treelinks" href="prop-schemastreetaddress.html">schema:streetAddress</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/telephone" class="treelinks" href="prop-schematelephone.html">schema:telephone</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#referenceNumber" class="treelinks" href="prop-dmareferencenumber.html">dma:referenceNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#seriesPart" class="treelinks" href="prop-dmaseriespart.html">dma:seriesPart</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#vatPrice" class="treelinks" href="prop-dmavatprice.html">dma:vatPrice</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#gameDataProperty" class="treelinks" href="prop-dmagamedataproperty.html">dma:gameDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/issued" class="treelinks" href="prop-dctermsissued.html">dcterms:issued</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/gamePlatform" class="treelinks" href="prop-schemagameplatform.html">schema:gamePlatform</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#accessories" class="treelinks" href="prop-dmaaccessories.html">dma:accessories</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#barcode" class="treelinks" href="prop-dmabarcode.html">dma:barcode</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#catalogueNumber" class="treelinks" href="prop-dmacataloguenumber.html">dma:catalogueNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#edition" class="treelinks" href="prop-dmaedition.html">dma:edition</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#exVatPrice" class="treelinks" href="prop-dmaexvatprice.html">dma:exVatPrice</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#numPlayers" class="treelinks" href="prop-dmanumplayers.html">dma:numPlayers</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#referenceNumber" class="treelinks" href="prop-dmareferencenumber.html">dma:referenceNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#vatPrice" class="treelinks" href="prop-dmavatprice.html">dma:vatPrice</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#movieDataProperty" class="treelinks" href="prop-dmamoviedataproperty.html">dma:movieDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/issued" class="treelinks" href="prop-dctermsissued.html">dcterms:issued</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/ontology/po/series" class="treelinks" href="prop-purlseries.html">purl:series</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/duration" class="treelinks" href="prop-schemaduration.html">schema:duration</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/numberOfItems" class="treelinks" href="prop-schemanumberofitems.html">schema:numberOfItems</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#barcode" class="treelinks" href="prop-dmabarcode.html">dma:barcode</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#catalogueNumber" class="treelinks" href="prop-dmacataloguenumber.html">dma:catalogueNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#digitalIdentifier" class="treelinks" href="prop-dmadigitalidentifier.html">dma:digitalIdentifier</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#ediNumber" class="treelinks" href="prop-dmaedinumber.html">dma:ediNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#edition" class="treelinks" href="prop-dmaedition.html">dma:edition</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#exVatPrice" class="treelinks" href="prop-dmaexvatprice.html">dma:exVatPrice</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#referenceNumber" class="treelinks" href="prop-dmareferencenumber.html">dma:referenceNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#vatPrice" class="treelinks" href="prop-dmavatprice.html">dma:vatPrice</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#musicDataProperty" class="treelinks" href="prop-dmamusicdataproperty.html">dma:musicDataProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/notes" class="treelinks" href="prop-dponotes.html">dpo:notes</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/dc/terms/issued" class="treelinks" href="prop-dctermsissued.html">dcterms:issued</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://purl.org/ontology/po/series" class="treelinks" href="prop-purlseries.html">purl:series</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/numTracks" class="treelinks" href="prop-schemanumtracks.html">schema:numTracks</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/numberOfItems" class="treelinks" href="prop-schemanumberofitems.html">schema:numberOfItems</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#barcode" class="treelinks" href="prop-dmabarcode.html">dma:barcode</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#bic" class="treelinks" href="prop-dmabic.html">dma:bic</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#catalogueNumber" class="treelinks" href="prop-dmacataloguenumber.html">dma:catalogueNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#edition" class="treelinks" href="prop-dmaedition.html">dma:edition</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#exVatPrice" class="treelinks" href="prop-dmaexvatprice.html">dma:exVatPrice</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#referenceNumber" class="treelinks" href="prop-dmareferencenumber.html">dma:referenceNumber</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#trackDp" class="treelinks" href="prop-dmatrackdp.html">dma:trackDp</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/position" class="treelinks" href="prop-schemaposition.html">schema:position</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#trackISRC" class="treelinks" href="prop-dmatrackisrc.html">dma:trackISRC</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#vatPrice" class="treelinks" href="prop-dmavatprice.html">dma:vatPrice</a></td>
+						  </tr></table></td>
+							</tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#productObjectProperty" class="treelinks" href="prop-dmaproductobjectproperty.html">dma:productObjectProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#bookObjectProperty" class="treelinks" href="prop-dmabookobjectproperty.html">dma:bookObjectProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/address" class="treelinks" href="prop-schemaaddress.html">schema:address</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/addressCountry" class="treelinks" href="prop-schemaaddresscountry.html">schema:addressCountry</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/encodingFormat" class="treelinks" href="prop-schemaencodingformat.html">schema:encodingFormat</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/publisher" class="treelinks" href="prop-schemapublisher.html">schema:publisher</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#pubCountry" class="treelinks" href="prop-dmapubcountry.html">dma:pubCountry</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/basedOn" class="treelinks" href="prop-dpobasedon.html">dpo:basedOn</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/property/adaptation" class="treelinks" href="prop-dbpadaptation.html">dbp:adaptation</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/author" class="treelinks" href="prop-schemaauthor.html">schema:author</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/contributor" class="treelinks" href="prop-schemacontributor.html">schema:contributor</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#gameObjectProperty" class="treelinks" href="prop-dmagameobjectproperty.html">dma:gameObjectProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/encodingFormat" class="treelinks" href="prop-schemaencodingformat.html">schema:encodingFormat</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/publisher" class="treelinks" href="prop-schemapublisher.html">schema:publisher</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#pubCountry" class="treelinks" href="prop-dmapubcountry.html">dma:pubCountry</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/basedOn" class="treelinks" href="prop-dpobasedon.html">dpo:basedOn</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/property/adaptation" class="treelinks" href="prop-dbpadaptation.html">dbp:adaptation</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/author" class="treelinks" href="prop-schemaauthor.html">schema:author</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/contributor" class="treelinks" href="prop-schemacontributor.html">schema:contributor</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#movieObjectProperty" class="treelinks" href="prop-dmamovieobjectproperty.html">dma:movieObjectProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/encodingFormat" class="treelinks" href="prop-schemaencodingformat.html">schema:encodingFormat</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/publisher" class="treelinks" href="prop-schemapublisher.html">schema:publisher</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#pubCountry" class="treelinks" href="prop-dmapubcountry.html">dma:pubCountry</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/basedOn" class="treelinks" href="prop-dpobasedon.html">dpo:basedOn</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/property/adaptation" class="treelinks" href="prop-dbpadaptation.html">dbp:adaptation</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/author" class="treelinks" href="prop-schemaauthor.html">schema:author</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/contributor" class="treelinks" href="prop-schemacontributor.html">schema:contributor</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/subtitleLanguage" class="treelinks" href="prop-schemasubtitlelanguage.html">schema:subtitleLanguage</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/track" class="treelinks" href="prop-schematrack.html">schema:track</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/trailer" class="treelinks" href="prop-schematrailer.html">schema:trailer</a></td>
+						  </tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#musicObjectProperty" class="treelinks" href="prop-dmamusicobjectproperty.html">dma:musicObjectProperty</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/encodingFormat" class="treelinks" href="prop-schemaencodingformat.html">schema:encodingFormat</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/publisher" class="treelinks" href="prop-schemapublisher.html">schema:publisher</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#pubCountry" class="treelinks" href="prop-dmapubcountry.html">dma:pubCountry</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/basedOn" class="treelinks" href="prop-dpobasedon.html">dpo:basedOn</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/property/adaptation" class="treelinks" href="prop-dbpadaptation.html">dbp:adaptation</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/author" class="treelinks" href="prop-schemaauthor.html">schema:author</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/contributor" class="treelinks" href="prop-schemacontributor.html">schema:contributor</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://schema.org/track" class="treelinks" href="prop-schematrack.html">schema:track</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#trackOp" class="treelinks" href="prop-dmatrackop.html">dma:trackOp</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="https://w3id.org/media/dma#recording" class="treelinks" href="prop-dmarecording.html">dma:recording</a></td>
+						  </tr></table></td>
+							</tr></table></td>
+							</tr></table></td>
+							</tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/abstract" class="treelinks" href="prop-dpoabstract.html">dpo:abstract</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://dbpedia.org/ontology/role" class="treelinks" href="prop-dporole.html">dpo:role</a></td>
+						  </tr> <tr>
+							<td class="space"></td>
+							<td class="bar"></td>
+							<td class="space"></td>
+							<td><table class="h"><tr>
+							<td class="tc" colspan=4><a title="http://www.w3.org/2002/07/owl#annotatedSource" class="treelinks" href="prop-owlannotatedsource.html">owl:annotatedSource</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://www.w3.org/2002/07/owl#annotatedTarget" class="treelinks" href="prop-owlannotatedtarget.html">owl:annotatedTarget</a></td>
+						  </tr></table></td>
+							</tr></table>
+
+
+      </div>
+    </div>
+     </div></div>
+
+
+
+
+
+
+    <div class="container margin50">
+
+
+    </div> <!-- /container -->
+
+
+  
+
+
+	</div><!-- /#page-content-wrapper -->
+
+
+  
+
+
+
+  
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+    
+      <p class="text-muted">Documentation automatically generated on 15th March 2019 with <a href="https://github.com/lambdamusic/OntoDocs">OntoDocs</a> (v1.2.2)</p>
+
+    
+    </div>
+  </footer>
+
+
+</div><!-- /#wrapper -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="static/libs/jquery/1_12_4/jquery.min.js"></script>
+<script src="static/libs/bootstrap-3_3_7-dist/js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="static/libs/bootstrap-3_3_7-dist/js/ie10-viewport-bug-workaround.js"></script>
+
+<script src="static/libs/chartjs-2_4_0/chart.bundle.js"></script>
+
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+
+$('#search-input-sidebar').keyup(function() {
+
+  var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+  // var $rows = $(this).next(".entities-list").find("div");
+  var $rows = $(this).parent().parent().find("li.second-level");
+
+  $rows.show().filter(function() {
+      var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+      return !~text.indexOf(val);
+  }).hide();
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+// http://stackoverflow.com/questions/9127498/how-to-perform-a-real-time-search-and-filter-on-a-html-table
+
+  $('#search-input').keyup(function() {
+
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+    // var $rows = $(this).next(".entities-list").find("div");
+    var $rows = $(this).parent().next().find(".entities-list tr");
+
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+
+
+</script>
+
+
+
+<!-- Scroll Sidebar Script -->
+
+<script type="text/javascript">
+
+  $(document).ready(function (){
+    $('#sidebar-wrapper').animate({
+        scrollTop: $("#sd_properties").offset().top - 100
+    }, 100);
+  });
+
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1979 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="static/libs/img/favicon.ico">
+
+	
+		<title>OntoDocs > Digital Media Asset</title>
+	
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="static/libs/bootstrap-3_3_7-dist/css/bootstrap.min.css" rel="stylesheet">  -->
+    <!-- Bootswatch:  -->
+    <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
+    <link href="static/libs/bootswatch3_2/simplex/bootstrap.min.css" rel="stylesheet">
+    <link href="static/custom/css/simple-sidebar.css" rel="stylesheet">
+    <link href="static/custom/css/familytree.css" rel="stylesheet">
+    <link href="static/custom/css/tabletree.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="static/libs/bootstrap-3_3_7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/custom/css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+
+  .lead-plus {font-size: 26.5px;}
+  .label-xs {font-size: 10px;}
+  .label-dark {background: #2c3e50; color: white; padding: 1px;}
+  .margin50 {margin-top: 50px; margin-bottom: 50px;}
+
+  .namespaces {background: #ced2d6; width: 100%;}
+
+
+  /*so that the d3plus tooltip panel doesnt cover the top banner*/
+  .navbar {z-index: 3000;}
+
+
+  .panel-body dt {margin-top: 5px;}
+  .page-header  {margin-top: 30px;}
+  #wrapper {margin-top: 50px;}
+
+  .implementation-panel {
+    overflow: auto;
+    /*max-height: 500px;*/
+  }
+
+  tr.table-classproperties {
+      /*background: #f5f5f5;*/
+  }
+  tr.table-classproperties th {
+      font-size: 80%;
+      font-weight: normal;
+  }
+
+
+  tr.table-inheritanceinfo {
+      /*background: #f5f5f5;*/
+      text-align: left;
+  }
+
+  tr.table-inheritanceinfo th {
+      font-size: 90%;
+      font-weight: normal;
+  }
+
+
+  .breadcrumb {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .breadcrumb a {
+      text-transform: capitalize;
+  }
+  .breadcrumb li {
+      text-transform: none;
+      /*so to catch the uri @todo improve*/
+  }
+
+
+  .fromclass_link {
+    /*color: white;
+    text-decoration: underline;*/
+    /*background: #1c1e52;*/
+    color: inherit;
+    /*padding: 1px;*/
+  }
+
+		.mythumbnail {
+			display: block;
+			padding: 13px;
+			margin-bottom: 30px;
+			line-height: 13.428571;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 30px;
+		}
+
+		.mythumbnail:hover {
+			background: lightyellow;
+			text-decoration: none;
+		}
+
+
+		.img-container{
+		    height:100%;
+			overflow: hidden;
+		    max-height:200px;
+			padding: 10px;
+/*			margin: 20px 0px 20px 0px;*/
+			border: 1em #EAE5E5 solid;
+		}
+
+		.img-container:hover {
+			border: 1px grey solid;
+		}
+
+		img{
+/*		    height:100% !important;*/
+		}
+
+
+		.icon-xxs {
+			font-size: 15px;
+		}
+
+
+    /* dropdown open on hover */
+
+    @media (min-width: 979px) {
+      ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+      }
+    }
+
+
+
+/*pygments css*/
+.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/*overloading this class from pygments*/
+.highlight {
+  overflow: auto;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+  </head>
+
+  <body>
+
+
+
+    
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" id="menu-toggle" title="Toggle sidebar">
+        
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html"><code style="font-size: 115%;">Digital Media Asset</code></a></li>
+        
+
+       
+
+
+        <li  ><a href="entities-az.html">Entities A-Z</a></li>
+        
+        <li ><a href="entities-tree-classes.html">Classes</a></li>
+        
+        
+        <li ><a href="entities-tree-properties.html">Properties</a></li>
+        
+        
+        
+        <li  ><a href="statistics.html">Statistics</a></li>
+
+
+
+
+
+      </ul>
+      
+    </div><!--/.nav-collapse -->
+
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<div id="wrapper" class="toggled">
+
+
+    
+
+    
+        
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+
+
+        <li>
+          <input style="margin-top: 30px;  margin-bottom: 20px;" type="text" id="search-input-sidebar" name="" value="" placeholder="Type to search">
+        </li>
+
+        
+          <li class="-second-level" id="sd_classes"><a href="entities-tree-classes.html">Classes (35)</a>
+          </li>
+
+            
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_15"><a  href="class-dmaasset.html">dma:Asset</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_16"><a  href="class-dmaassettype.html">dma:AssetType</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_17"><a  href="class-dmacharacter.html">dma:Character</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_18"><a  href="class-dmacontentrating.html">dma:ContentRating</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_19"><a  href="class-dmaencodingformat.html">dma:EncodingFormat</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_20"><a class="active" href="class-dmaextension.html">dma:Extension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_21"><a  href="class-dmagender.html">dma:Gender</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_22"><a  href="class-dmagenericextension.html">dma:GenericExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_23"><a  href="class-dmagenre.html">dma:Genre</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_24"><a  href="class-dmalanguage.html">dma:Language</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_25"><a  href="class-dmalicense.html">dma:License</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_26"><a  href="class-dmalinkingextension.html">dma:LinkingExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_27"><a  href="class-dmanomenclature.html">dma:Nomenclature</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_28"><a  href="class-dmaownerextension.html">dma:OwnerExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_29"><a  href="class-dmasemanticextension.html">dma:SemanticExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_30"><a  href="class-dmasocialmediaextension.html">dma:SocialMediaExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a  href="class-dmasourcetype.html">dma:SourceType</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_32"><a  href="class-dmastatus.html">dma:Status</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_33"><a  href="class-dmasyndicationextension.html">dma:SyndicationExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_34"><a  href="class-dmatheme.html">dma:Theme</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_35"><a  href="class-dmavoicecontrolextension.html">dma:VoiceControlExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_36"><a  href="class-dmawidget.html">dma:Widget</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_2"><a  href="class-dpofictionalcharacter.html">dpo:FictionalCharacter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_3"><a  href="class-dpoprofession.html">dpo:Profession</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_4"><a  href="class-schemabook.html">schema:Book</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_5"><a  href="class-schemacountry.html">schema:Country</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_6"><a  href="class-schemamovie.html">schema:Movie</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_7"><a  href="class-schemamusicalbum.html">schema:MusicAlbum</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_8"><a  href="class-schemamusicrecording.html">schema:MusicRecording</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_9"><a  href="class-schemaorganization.html">schema:Organization</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_10"><a  href="class-schemaperson.html">schema:Person</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_11"><a  href="class-schemaplace.html">schema:Place</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_12"><a  href="class-schemapostaladdressextension.html">schema:PostalAddressExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_13"><a  href="class-schemaproduct.html">schema:Product</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_14"><a  href="class-schemavideogame.html">schema:VideoGame</a></li>
+          
+        
+
+        
+            <li class="-second-level" id="sd_properties"><a  href="entities-tree-properties.html">Properties (154)</a>
+            </li>
+
+            
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_48"><a   href="prop-ontolegolang_uagenumberofclasses.html">ONTOLegolang_UAge:numberOfClasses</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_49"><a   href="prop-ontolegolang_uagenumberofdataproperties.html">ONTOLegolang_UAge:numberOfDataProperties</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_50"><a   href="prop-ontolegolang_uagenumberofobjectproperties.html">ONTOLegolang_UAge:numberOfObjectProperties</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_162"><a   href="prop-dbpadaptation.html">dbp:adaptation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_39"><a   href="prop-dbpcontactinfo.html">dbp:contactInfo</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_40"><a   href="prop-dbpcopyright.html">dbp:copyright</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_41"><a   href="prop-dbpexample.html">dbp:example</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_163"><a   href="prop-dccreator.html">dc:creator</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_42"><a   href="prop-dcdate.html">dc:date</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_52"><a   href="prop-dcdescription.html">dc:description</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_143"><a   href="prop-dclanguage.html">dc:language</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_53"><a   href="prop-dctitle.html">dc:title</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_43"><a   href="prop-dctermsdatecopyrighted.html">dcterms:dateCopyrighted</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_54"><a   href="prop-dctermsissued.html">dcterms:issued</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_44"><a   href="prop-dctermslanguage.html">dcterms:language</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_45"><a   href="prop-dctermslicense.html">dcterms:license</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_55"><a   href="prop-dctermsprovenanceprice.html">dcterms:provenance#price</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_56"><a   href="prop-dctermsprovenancetargettitle.html">dcterms:provenance#targetTitle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_57"><a   href="prop-dctermsprovenancetargettype.html">dcterms:provenance#targetType</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_93"><a   href="prop-dmaaccessories.html">dma:accessories</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_94"><a   href="prop-dmaassetdataproperty.html">dma:assetDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_174"><a   href="prop-dmaassetobjectproperty.html">dma:assetObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_95"><a   href="prop-dmabarcode.html">dma:barcode</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_96"><a   href="prop-dmabic.html">dma:bic</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_97"><a   href="prop-dmabookdataproperty.html">dma:bookDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_175"><a   href="prop-dmabookobjectproperty.html">dma:bookObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_98"><a   href="prop-dmacataloguenumber.html">dma:catalogueNumber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_99"><a   href="prop-dmacopyright.html">dma:copyright</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_100"><a   href="prop-dmacreationdate.html">dma:creationDate</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_101"><a   href="prop-dmadewey.html">dma:dewey</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_102"><a   href="prop-dmadigitalidentifier.html">dma:digitalIdentifier</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_103"><a   href="prop-dmadynamiccommunity.html">dma:dynamicCommunity</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_104"><a   href="prop-dmaetag.html">dma:eTag</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_105"><a   href="prop-dmaedinumber.html">dma:ediNumber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_106"><a   href="prop-dmaedition.html">dma:edition</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_107"><a   href="prop-dmaexvatprice.html">dma:exVatPrice</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_176"><a   href="prop-dmaextension.html">dma:extension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_108"><a   href="prop-dmaextensionkey.html">dma:extensionKey</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_109"><a   href="prop-dmaextentionvalue.html">dma:extentionValue</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_110"><a   href="prop-dmaexternalterms.html">dma:externalTerms</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_111"><a   href="prop-dmagamedataproperty.html">dma:gameDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_177"><a   href="prop-dmagameobjectproperty.html">dma:gameObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_178"><a   href="prop-dmagenericextension.html">dma:genericExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_112"><a   href="prop-dmagenericextensiondataproperty.html">dma:genericExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_113"><a   href="prop-dmagrammar.html">dma:grammar</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_114"><a   href="prop-dmaidentifier.html">dma:identifier</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_115"><a   href="prop-dmalastupdated.html">dma:lastUpdated</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_116"><a   href="prop-dmalc.html">dma:lc</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_117"><a   href="prop-dmalinkend.html">dma:linkEnd</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_118"><a   href="prop-dmalinkstart.html">dma:linkStart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_179"><a   href="prop-dmalinkingextension.html">dma:linkingExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_119"><a   href="prop-dmalinkingextensiondataproperty.html">dma:linkingExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_120"><a   href="prop-dmamoviedataproperty.html">dma:movieDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_180"><a   href="prop-dmamovieobjectproperty.html">dma:movieObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_121"><a   href="prop-dmamusicdataproperty.html">dma:musicDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_181"><a   href="prop-dmamusicobjectproperty.html">dma:musicObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_122"><a   href="prop-dmanomenclaturedataproperty.html">dma:nomenclatureDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_182"><a   href="prop-dmanomenclatureobjectproperty.html">dma:nomenclatureObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_123"><a   href="prop-dmanumplayers.html">dma:numPlayers</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_154"><a   href="prop-dmaowner.html">dma:owner</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_183"><a   href="prop-dmaownerextension.html">dma:ownerExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_124"><a   href="prop-dmaownerextentiondataproperty.html">dma:ownerExtentionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_125"><a   href="prop-dmapersondataproperty.html">dma:personDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_184"><a   href="prop-dmapersonobjectproperty.html">dma:personObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_126"><a   href="prop-dmapostaladdress.html">dma:postalAddress</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_127"><a   href="prop-dmaproductdataproperty.html">dma:productDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_185"><a   href="prop-dmaproductobjectproperty.html">dma:productObjectProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_155"><a   href="prop-dmapubcountry.html">dma:pubCountry</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_186"><a   href="prop-dmarecording.html">dma:recording</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_128"><a   href="prop-dmareferencenumber.html">dma:referenceNumber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_187"><a   href="prop-dmarelatedasset.html">dma:relatedAsset</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_129"><a   href="prop-dmarelateddbpedia.html">dma:relatedDbpedia</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_130"><a   href="prop-dmascreenshots.html">dma:screenshots</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_156"><a   href="prop-dmasemanticextension.html">dma:semanticExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_131"><a   href="prop-dmasemanticextensiondataproperty.html">dma:semanticExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_132"><a   href="prop-dmaseriespart.html">dma:seriesPart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_188"><a   href="prop-dmasocialmediaextension.html">dma:socialMediaExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_133"><a   href="prop-dmasocialmediaextensiondataproperty.html">dma:socialMediaExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_134"><a   href="prop-dmasourceelement.html">dma:sourceElement</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_157"><a   href="prop-dmasourcetype.html">dma:sourceType</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_135"><a   href="prop-dmasourcevalue.html">dma:sourceValue</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_189"><a   href="prop-dmasyndicationextension.html">dma:syndicationExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_136"><a   href="prop-dmasyndicationextensiondataproperty.html">dma:syndicationExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_137"><a   href="prop-dmatargetelement.html">dma:targetElement</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_138"><a   href="prop-dmatargetid.html">dma:targetId</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_158"><a   href="prop-dmatheme.html">dma:theme</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_139"><a   href="prop-dmatrackdp.html">dma:trackDp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_140"><a   href="prop-dmatrackisrc.html">dma:trackISRC</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_190"><a   href="prop-dmatrackop.html">dma:trackOp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_141"><a   href="prop-dmavatprice.html">dma:vatPrice</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_159"><a   href="prop-dmavoicecontrolextension.html">dma:voiceControlExtension</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_142"><a   href="prop-dmavoicecontrolextensiondataproperty.html">dma:voiceControlExtensionDataProperty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_160"><a   href="prop-dmawidget.html">dma:widget</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_37"><a   href="prop-dpoabstract.html">dpo:abstract</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_161"><a   href="prop-dpobasedon.html">dpo:basedOn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_51"><a   href="prop-dponotes.html">dpo:notes</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_38"><a   href="prop-dporole.html">dpo:role</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_46"><a   href="prop-owlannotatedsource.html">owl:annotatedSource</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_47"><a   href="prop-owlannotatedtarget.html">owl:annotatedTarget</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_58"><a   href="prop-purlseries.html">purl:series</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_59"><a   href="prop-rdvocabdateofbirth.html">rdvocab:dateOfBirth</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_60"><a   href="prop-rdvocabdateofdeath.html">rdvocab:dateOfDeath</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_144"><a   href="prop-rdvocabgender.html">rdvocab:gender</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_164"><a   href="prop-rdvocabprofessionoroccupation.html">rdvocab:professionOrOccupation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_61"><a   href="prop-schemareviewreviewbody.html">schema:Review/reviewBody</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_145"><a   href="prop-schemaaddress.html">schema:address</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_146"><a   href="prop-schemaaddresscountry.html">schema:addressCountry</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_62"><a   href="prop-schemaaddresslocality.html">schema:addressLocality</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_165"><a   href="prop-schemaaffiliation.html">schema:affiliation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_63"><a   href="prop-schemaalternatename.html">schema:alternateName</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_166"><a   href="prop-schemaauthor.html">schema:author</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_64"><a   href="prop-schemaawards.html">schema:awards</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_147"><a   href="prop-schemabirthplace.html">schema:birthPlace</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_65"><a   href="prop-schemabookedition.html">schema:bookEdition</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_66"><a   href="prop-schemacommenttext.html">schema:commentText</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_148"><a   href="prop-schemacontentrating.html">schema:contentRating</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_167"><a   href="prop-schemacontributor.html">schema:contributor</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_67"><a   href="prop-schemadatepublished.html">schema:datePublished</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_149"><a   href="prop-schemadeathplace.html">schema:deathPlace</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_68"><a   href="prop-schemaduration.html">schema:duration</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_69"><a   href="prop-schemaemail.html">schema:email</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_150"><a   href="prop-schemaencodingformat.html">schema:encodingFormat</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_70"><a   href="prop-schemafamilyname.html">schema:familyName</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_71"><a   href="prop-schemafaxnumber.html">schema:faxNumber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_72"><a   href="prop-schemagameplatform.html">schema:gamePlatform</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_168"><a   href="prop-schemagenre.html">schema:genre</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_73"><a   href="prop-schemagivenname.html">schema:givenName</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_74"><a   href="prop-schemaimage.html">schema:image</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_75"><a   href="prop-schemaisbn.html">schema:isbn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_76"><a   href="prop-schemakeywords.html">schema:keywords</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_151"><a   href="prop-schemalicense.html">schema:license</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_169"><a   href="prop-schemanationality.html">schema:nationality</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_77"><a   href="prop-schemanumtracks.html">schema:numTracks</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_78"><a   href="prop-schemanumberofitems.html">schema:numberOfItems</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_79"><a   href="prop-schemanumberofpages.html">schema:numberOfPages</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_80"><a   href="prop-schemaposition.html">schema:position</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_81"><a   href="prop-schemapostalcode.html">schema:postalCode</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_152"><a   href="prop-schemapublisher.html">schema:publisher</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_82"><a   href="prop-schemaratingvalue.html">schema:ratingValue</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_83"><a   href="prop-schemarequiredminage.html">schema:requiredMinAge</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_170"><a   href="prop-schemasameas.html">schema:sameAs</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_153"><a   href="prop-schemastatus.html">schema:status</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_84"><a   href="prop-schemastreetaddress.html">schema:streetAddress</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_171"><a   href="prop-schemasubtitlelanguage.html">schema:subtitleLanguage</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_85"><a   href="prop-schematelephone.html">schema:telephone</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_86"><a   href="prop-schematext.html">schema:text</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_87"><a   href="prop-schematitle.html">schema:title</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_172"><a   href="prop-schematrack.html">schema:track</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_173"><a   href="prop-schematrailer.html">schema:trailer</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_88"><a   href="prop-schematypicalagerange.html">schema:typicalAgeRange</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_89"><a   href="prop-schemaurl.html">schema:url</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_90"><a   href="prop-schemavalidfrom.html">schema:validFrom</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_91"><a   href="prop-schemavaliduntil.html">schema:validUntil</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_92"><a   href="prop-schemavalue.html">schema:value</a></li>
+          
+
+        
+
+        
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+    </ul>
+
+</div>
+
+
+<!-- /#sidebar-wrapper -->
+
+    
+
+
+
+
+    <!-- Begin page content -->
+    <div class="container" id="page-content-wrapper">
+
+      
+
+	
+
+
+
+
+
+
+        
+
+
+
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+          <a href="entities-az.html">Entities</a>
+    </li>
+    <li>
+          <a href="entities-tree-classes.html">Classes</a>
+    </li>
+      <li class="active">
+            https://w3id.org/media/dma#Extension
+        </li>
+  </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+            <h1>
+
+                dma:Extension
+                
+
+            </h1>
+            <hr>
+
+
+
+            <div class="tree-container">
+            <div class="tree">
+                <ul>
+                    
+
+                        <li><a href="entities-tree-classes.html">owl:Thing</a>
+
+                          <ul>
+                            <li><a style="font-weight: bold;" title="'Extension' - Extension describes specific classes for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM (http://samproject.net)">dma:Extension</a>
+
+                            
+                                <ul>
+                                  <li><a href="class-schemapostaladdressextension.html" title="'PostalAddressExtension' - This extension encloses information about postal adress related to assets.">schema:PostalAddressExtension</a></li><li><a href="class-dmagenericextension.html" title="'GenericExtension' - This extension refers to a class able to represent generic elements. This provides fields for representing any pair of data ...">dma:GenericExtension</a></li><li><a href="class-dmalinkingextension.html" title="'LinkingExtension' - This represents information about basic and advanced asset linking and compositions.">dma:LinkingExtension</a></li><li><a href="class-dmaownerextension.html" title="'OwnerExtension' - This extension represents generic information about the owner of the asset. It provides fields for representing any pair of data ...">dma:OwnerExtension</a></li><li><a href="class-dmasemanticextension.html" title="'SemanticExtension' - This extension represents all information regarding semantic annotations and characterization of assets.">dma:SemanticExtension</a></li><li><a href="class-dmasocialmediaextension.html" title="'SocialMediaExtension' - This extension represents social media aspects of an asset such as its related Facebook pages or Twitter accounts.">dma:SocialMediaExtension</a></li><li><a href="class-dmasyndicationextension.html" title="'SyndicationExtension' - This extension refers to processes related to the syndication of assets and their presentation to end-users.">dma:SyndicationExtension</a></li><li><a href="class-dmavoicecontrolextension.html" title="'VoiceControlExtension' - This extension includes information and grammar for personalized control of the devices that present particular assets.">dma:VoiceControlExtension</a></li>
+                                </ul>
+                            
+                              </li>
+
+                          </ul>
+
+                        </li>
+                    
+
+                </ul>
+            </div>
+            </div>
+
+
+
+
+           <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">URI</h3>
+            </div>
+            <div class="panel-body">
+
+                <code>https://w3id.org/media/dma#Extension</code>
+            </div>
+          </div>
+           </div></div>
+
+           
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Label</h3>
+            </div>
+            <div class="panel-body">
+
+                Extension
+            </div>
+          </div>
+           </div></div>
+           
+
+
+
+           
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Description</h3>
+            </div>
+            <div class="panel-body">
+
+                Extension describes specific classes for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM (http://samproject.net)
+            </div>
+          </div>
+           </div></div>
+           
+
+
+
+
+           
+
+
+
+          
+
+
+
+         
+           <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Usage</h3>
+            </div>
+            <div class="panel-body" style="overflow: auto;">
+
+                <p>Instances of dma:Extension can have the following properties:</p>
+            </div>
+             <table class="table table-bordered" style="overflow: auto;">
+
+                <tr class="table-classproperties">
+                    <th>PROPERTY</th><th>TYPE</th><th>DESCRIPTION</th><th>RANGE</th>
+                </tr>
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                        <tr class="table-inheritanceinfo">
+                            <th colspan="4" class="treeinfo"><span class="label label-default">From class <a title="owl:Thing" href="class-owlthing.html" class="fromclass_link">owl:Thing</a></span>
+                            </th>
+                        </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="ONTOLegolang_UAge:numberOfClasses" href="prop-ontolegolang_uagenumberofclasses.html">ONTOLegolang_UAge:numberOfClasses</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="ONTOLegolang_UAge:numberOfDataProperties" href="prop-ontolegolang_uagenumberofdataproperties.html">ONTOLegolang_UAge:numberOfDataProperties</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="ONTOLegolang_UAge:numberOfObjectProperties" href="prop-ontolegolang_uagenumberofobjectproperties.html">ONTOLegolang_UAge:numberOfObjectProperties</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dbp:contactInfo" href="prop-dbpcontactinfo.html">dbp:contactInfo</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dbp:copyright" href="prop-dbpcopyright.html">dbp:copyright</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dbp:example" href="prop-dbpexample.html">dbp:example</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dc:date" href="prop-dcdate.html">dc:date</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dc:title" href="prop-dctitle.html">dc:title</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dcterms:dateCopyrighted" href="prop-dctermsdatecopyrighted.html">dcterms:dateCopyrighted</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dcterms:language" href="prop-dctermslanguage.html">dcterms:language</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dcterms:license" href="prop-dctermslicense.html">dcterms:license</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:assetDataProperty" href="prop-dmaassetdataproperty.html">dma:assetDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines generic data properties regarding Digital Media Assets</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:assetObjectProperty" href="prop-dmaassetobjectproperty.html">dma:assetObjectProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines generic object properties regarding Digital Media Assets</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:bookDataProperty" href="prop-dmabookdataproperty.html">dma:bookDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines information related to digital books</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:bookObjectProperty" href="prop-dmabookobjectproperty.html">dma:bookObjectProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It refers to object properties related to digital books.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:extension" href="prop-dmaextension.html">dma:extension</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This describes specific object property extensions for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM platform (http://samproject.net).</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:externalTerms" href="prop-dmaexternalterms.html">dma:externalTerms</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It refers to terms reused from external sources. In general for grouping terms isolated in the ontology.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:gameDataProperty" href="prop-dmagamedataproperty.html">dma:gameDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines information regarding games</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:gameObjectProperty" href="prop-dmagameobjectproperty.html">dma:gameObjectProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It refers to object properties related to video games.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:genericExtensionDataProperty" href="prop-dmagenericextensiondataproperty.html">dma:genericExtensionDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This describes specific data property extensions for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM platform (http://samproject.net).</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:linkingExtensionDataProperty" href="prop-dmalinkingextensiondataproperty.html">dma:linkingExtensionDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This refers to an data property able to represent elements of an Asset that are linked along a time line.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:movieDataProperty" href="prop-dmamoviedataproperty.html">dma:movieDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines information regarding movies/films/videos</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:movieObjectProperty" href="prop-dmamovieobjectproperty.html">dma:movieObjectProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It refers to object properties related to movies/films/videos.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:musicDataProperty" href="prop-dmamusicdataproperty.html">dma:musicDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines information regarding musics</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:musicObjectProperty" href="prop-dmamusicobjectproperty.html">dma:musicObjectProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It refers to object properties related to music albums.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:nomenclatureDataProperty" href="prop-dmanomenclaturedataproperty.html">dma:nomenclatureDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines nomenclature data properties regarding Digital Media Assets</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:nomenclatureObjectProperty" href="prop-dmanomenclatureobjectproperty.html">dma:nomenclatureObjectProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines nomenclature object properties regarding Digital Media Assets</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:ownerExtentionDataProperty" href="prop-dmaownerextentiondataproperty.html">dma:ownerExtentionDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This refers to a data property able to represent elements of an Asset that set  generic information about owner of this Asset.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:personDataProperty" href="prop-dmapersondataproperty.html">dma:personDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines information about persons</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:personObjectProperty" href="prop-dmapersonobjectproperty.html">dma:personObjectProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This refers to object properties about persons.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:postalAddress" href="prop-dmapostaladdress.html">dma:postalAddress</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines information regarding postal address</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:productDataProperty" href="prop-dmaproductdataproperty.html">dma:productDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It defines information regarding products</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:productObjectProperty" href="prop-dmaproductobjectproperty.html">dma:productObjectProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It refers to object properties related to digital products.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:semanticExtensionDataProperty" href="prop-dmasemanticextensiondataproperty.html">dma:semanticExtensionDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This refers to information about the semantic annotation and characterization of assets.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:socialMediaExtensionDataProperty" href="prop-dmasocialmediaextensiondataproperty.html">dma:socialMediaExtensionDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This refers to social media aspects of an asset such as the related Facebook pages or Twitter accounts.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:syndicationExtensionDataProperty" href="prop-dmasyndicationextensiondataproperty.html">dma:syndicationExtensionDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This refers to processes related to the syndication of assets and their presentation to end-users.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:trackDp" href="prop-dmatrackdp.html">dma:trackDp</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It refers a generic data property regarding tracks.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:trackOp" href="prop-dmatrackop.html">dma:trackOp</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>It refers to object properties related to music recordings , i.e. tracks.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dma:voiceControlExtensionDataProperty" href="prop-dmavoicecontrolextensiondataproperty.html">dma:voiceControlExtensionDataProperty</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>This  refers  to information and grammar for personalized control of the devices that present the particular assets.</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dpo:abstract" href="prop-dpoabstract.html">dpo:abstract</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="dpo:role" href="prop-dporole.html">dpo:role</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                    
+
+                                        
+                                          <a title="dpo:Profession" href="class-dpoprofession.html" class="rdfclass">dpo:Profession</a>
+                                        
+
+
+                                    
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="owl:annotatedSource" href="prop-owlannotatedsource.html">owl:annotatedSource</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                    
+
+                                        
+                                          <a title="schema:Organization" href="class-schemaorganization.html" class="rdfclass">schema:Organization</a>
+                                        
+
+
+                                    
+
+                                        
+                                          <a title="schema:Person" href="class-schemaperson.html" class="rdfclass">schema:Person</a>
+                                        
+
+
+                                    
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="owl:annotatedTarget" href="prop-owlannotatedtarget.html">owl:annotatedTarget</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:AnnotationProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                    
+
+                                        
+                                          <a title="dma:Asset" href="class-dmaasset.html" class="rdfclass">dma:Asset</a>
+                                        
+
+
+                                    
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="schema:bookEdition" href="prop-schemabookedition.html">schema:bookEdition</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="schema:datePublished" href="prop-schemadatepublished.html">schema:datePublished</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:DatatypeProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+
+                    
+
+                    
+
+                
+
+            </table>
+
+
+          </div>
+           </div></div>
+
+        
+
+
+
+
+
+
+           <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Implementation</h3>
+            </div>
+            <div class="panel-body implementation-panel">
+
+                
+
+                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/media/dma#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ONTOLegolang_UAge:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/nlp/ONTOLegolang_UAge#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dbp:</span><span class="w"> </span><span class="nv">&lt;http://dbpedia.org/property/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dc:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/elements/1.1/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dpo:</span><span class="w"> </span><span class="nv">&lt;http://dbpedia.org/ontology/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">edm:</span><span class="w"> </span><span class="nv">&lt;http://www.europeana.eu/schemas/edm#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">protege:</span><span class="w"> </span><span class="nv">&lt;http://protege.stanford.edu/plugins/owl/protege#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">purl:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/ontology/po/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdvocab:</span><span class="w"> </span><span class="nv">&lt;http://rdvocab.info/ElementsGr2/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">schema:</span><span class="w"> </span><span class="nv">&lt;https://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">sh:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/shacl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">swrl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2003/11/swrl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">swrlb:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2003/11/swrlb#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">vann:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/vocab/vann/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">void:</span><span class="w"> </span><span class="nv">&lt;http://rdfs.org/ns/void#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">xml:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/XML/1998/namespace&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">xsp:</span><span class="w"> </span><span class="nv">&lt;http://www.owl-ontologies.com/2005/08/07/xsp.owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="nn">:</span><span class="nt">Extension</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">Class</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">label</span><span class="w"> </span><span class="s">&quot;Extension&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">comment</span><span class="w"> </span><span class="s">&quot;Extension describes specific classes for ensuring the operativity of Digital Media Assets inside a multimedia platform like SAM (http://samproject.net)&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+</pre></div>
+
+
+                
+            </div>
+          </div>
+           </div></div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+	</div><!-- /#page-content-wrapper -->
+
+
+  
+
+
+
+  
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+    
+      <p class="text-muted">Documentation automatically generated on 15th March 2019 with <a href="https://github.com/lambdamusic/OntoDocs">OntoDocs</a> (v1.2.2)</p>
+
+    
+    </div>
+  </footer>
+
+
+</div><!-- /#wrapper -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="static/libs/jquery/1_12_4/jquery.min.js"></script>
+<script src="static/libs/bootstrap-3_3_7-dist/js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="static/libs/bootstrap-3_3_7-dist/js/ie10-viewport-bug-workaround.js"></script>
+
+<script src="static/libs/chartjs-2_4_0/chart.bundle.js"></script>
+
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+
+$('#search-input-sidebar').keyup(function() {
+
+  var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+  // var $rows = $(this).next(".entities-list").find("div");
+  var $rows = $(this).parent().parent().find("li.second-level");
+
+  $rows.show().filter(function() {
+      var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+      return !~text.indexOf(val);
+  }).hide();
+});
+
+</script>
+
+
+
+
+  <!-- Scroll Sidebar Script -->
+
+  
+  
+
+  <script type="text/javascript">
+
+    $(document).ready(function (){
+      $('#sidebar-wrapper').animate({
+          scrollTop: $("#sd_20").offset().top - 100
+      }, 100);
+    });
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
