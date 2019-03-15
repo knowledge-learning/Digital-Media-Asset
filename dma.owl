@@ -1997,7 +1997,6 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <owl:Class rdf:about="https://schema.org/Organization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Asset"/>
         <rdfs:label>Organisation</rdfs:label>
-        <rdfs:label>OrganisationAsset</rdfs:label>
     </owl:Class>
     
 
@@ -2007,7 +2006,6 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     <owl:Class rdf:about="https://schema.org/Person">
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Asset"/>
         <rdfs:label>Person</rdfs:label>
-        <rdfs:label>PersonAsset</rdfs:label>
     </owl:Class>
     
 
