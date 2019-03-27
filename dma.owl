@@ -244,7 +244,7 @@ All rights reserved.</dbp:copyright>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#bookObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/Book"/>
-        <rdfs:range rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:range rdf:resource="https://schema.org/PostalAddress"/>
         <rdfs:label>address</rdfs:label>
     </owl:ObjectProperty>
     
@@ -257,7 +257,7 @@ All rights reserved.</dbp:copyright>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#nomenclatureObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
         <rdfs:range rdf:resource="https://schema.org/Country"/>
         <rdfs:label>addressCountry</rdfs:label>
@@ -912,7 +912,7 @@ All rights reserved.</dbp:copyright>
     <owl:DatatypeProperty rdf:about="https://schema.org/addressLocality">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>addressLocality</rdfs:label>
     </owl:DatatypeProperty>
@@ -990,7 +990,7 @@ All rights reserved.</dbp:copyright>
 
     <owl:DatatypeProperty rdf:about="https://schema.org/email">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
-        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>email</rdfs:label>
     </owl:DatatypeProperty>
@@ -1013,7 +1013,7 @@ All rights reserved.</dbp:copyright>
 
     <owl:DatatypeProperty rdf:about="https://schema.org/faxNumber">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
-        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>faxNumber</rdfs:label>
     </owl:DatatypeProperty>
@@ -1137,7 +1137,7 @@ All rights reserved.</dbp:copyright>
     <owl:DatatypeProperty rdf:about="https://schema.org/postalCode">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>postalCode</rdfs:label>
     </owl:DatatypeProperty>
@@ -1174,7 +1174,7 @@ All rights reserved.</dbp:copyright>
     <owl:DatatypeProperty rdf:about="https://schema.org/streetAddress">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>streetAddress</rdfs:label>
     </owl:DatatypeProperty>
@@ -1185,7 +1185,7 @@ All rights reserved.</dbp:copyright>
 
     <owl:DatatypeProperty rdf:about="https://schema.org/telephone">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#postalAddress"/>
-        <rdfs:domain rdf:resource="https://schema.org/PostalAddressExtension"/>
+        <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>telephone</rdfs:label>
     </owl:DatatypeProperty>
@@ -2020,9 +2020,9 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     
 
 
-    <!-- https://schema.org/PostalAddressExtension -->
+    <!-- https://schema.org/PostalAddress -->
 
-    <owl:Class rdf:about="https://schema.org/PostalAddressExtension">
+    <owl:Class rdf:about="https://schema.org/PostalAddress">
         <rdfs:subClassOf rdf:resource="https://w3id.org/media/dma#Extension"/>
         <dbp:example>For instance, postal address of an editiorial that publishes books.</dbp:example>
         <rdfs:comment>This extension encloses information about postal adress related to assets.</rdfs:comment>
@@ -2281,8 +2281,5 @@ Other examples can be &quot;Movie Widget&quot;, &quot;Album Widget&quot;, etc.</
 
 
 
-<<<<<<< HEAD
 <!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
-=======
->>>>>>> 60ad1354404177123ae28b454366fec2205b9b0c
 
