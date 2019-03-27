@@ -515,7 +515,7 @@
         <owl:annotatedSource rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Casino_Royale_novel"/>
         <owl:annotatedProperty rdf:resource="https://schema.org/contributor"/>
         <owl:annotatedTarget rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#Ian_Fleming"/>
-        <dpo:role rdf:resource="http://dbpedia.org/resource/Writer"/>
+        <dpo:role rdf:resource="https://w3id.org/media/dma/JamesBond_CaseStudy#WRITER"/>
     </owl:Axiom>
     
 
