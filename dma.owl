@@ -829,9 +829,9 @@ All rights reserved.</dbp:copyright>
     
 
 
-    <!-- http://purl.org/dc/terms/provenance#price -->
+    <!-- http://dbpedia.org/ontology/price -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/provenance#price">
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/price">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
@@ -841,9 +841,9 @@ All rights reserved.</dbp:copyright>
     
 
 
-    <!-- http://purl.org/dc/terms/provenance#targetTitle -->
+    <!-- https://w3id.org/media/dma#targetTitle -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/provenance#targetTitle">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#targetTitle">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
@@ -853,9 +853,9 @@ All rights reserved.</dbp:copyright>
     
 
 
-    <!-- http://purl.org/dc/terms/provenance#targetType -->
+    <!-- https://w3id.org/media/dma#targetType -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/provenance#targetType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#targetType">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
