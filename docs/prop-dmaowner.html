@@ -324,6 +324,10 @@
 
             
           
+              <li class="second-level" style="line-height: 20px;" id="sd_2"><a  href="class-dbofictionalcharacter.html">dbo:FictionalCharacter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_3"><a  href="class-dboprofession.html">dbo:Profession</a></li>
+          
               <li class="second-level" style="line-height: 20px;" id="sd_15"><a  href="class-dmaasset.html">dma:Asset</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_16"><a  href="class-dmaassettype.html">dma:AssetType</a></li>
@@ -368,10 +372,6 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_36"><a  href="class-dmawidget.html">dma:Widget</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_2"><a  href="class-dpofictionalcharacter.html">dpo:FictionalCharacter</a></li>
-          
-              <li class="second-level" style="line-height: 20px;" id="sd_3"><a  href="class-dpoprofession.html">dpo:Profession</a></li>
-          
               <li class="second-level" style="line-height: 20px;" id="sd_4"><a  href="class-schemabook.html">schema:Book</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_5"><a  href="class-schemacountry.html">schema:Country</a></li>
@@ -407,6 +407,16 @@
               <li class="second-level" style="line-height: 20px;" id="sd_49"><a   href="prop-ontolegolang_uagenumberofdataproperties.html">ONTOLegolang_UAge:numberOfDataProperties</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_50"><a   href="prop-ontolegolang_uagenumberofobjectproperties.html">ONTOLegolang_UAge:numberOfObjectProperties</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_37"><a   href="prop-dboabstract.html">dbo:abstract</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_161"><a   href="prop-dbobasedon.html">dbo:basedOn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_51"><a   href="prop-dbonotes.html">dbo:notes</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_52"><a   href="prop-dboprice.html">dbo:price</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_38"><a   href="prop-dborole.html">dbo:role</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_162"><a   href="prop-dbpadaptation.html">dbp:adaptation</a></li>
           
@@ -585,16 +595,6 @@
               <li class="second-level" style="line-height: 20px;" id="sd_142"><a   href="prop-dmavoicecontrolextensiondataproperty.html">dma:voiceControlExtensionDataProperty</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_160"><a   href="prop-dmawidget.html">dma:widget</a></li>
-          
-              <li class="second-level" style="line-height: 20px;" id="sd_37"><a   href="prop-dpoabstract.html">dpo:abstract</a></li>
-          
-              <li class="second-level" style="line-height: 20px;" id="sd_161"><a   href="prop-dpobasedon.html">dpo:basedOn</a></li>
-          
-              <li class="second-level" style="line-height: 20px;" id="sd_51"><a   href="prop-dponotes.html">dpo:notes</a></li>
-          
-              <li class="second-level" style="line-height: 20px;" id="sd_52"><a   href="prop-dpoprice.html">dpo:price</a></li>
-          
-              <li class="second-level" style="line-height: 20px;" id="sd_38"><a   href="prop-dporole.html">dpo:role</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_46"><a   href="prop-owlannotatedsource.html">owl:annotatedSource</a></li>
           
@@ -1035,10 +1035,10 @@
 
                     <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/media/dma#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">ONTOLegolang_UAge:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/nlp/ONTOLegolang_UAge#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dbo:</span><span class="w"> </span><span class="nv">&lt;http://dbpedia.org/ontology/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">dbp:</span><span class="w"> </span><span class="nv">&lt;http://dbpedia.org/property/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">dc:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/elements/1.1/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">dpo:</span><span class="w"> </span><span class="nv">&lt;http://dbpedia.org/ontology/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">edm:</span><span class="w"> </span><span class="nv">&lt;http://www.europeana.eu/schemas/edm#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">protege:</span><span class="w"> </span><span class="nv">&lt;http://protege.stanford.edu/plugins/owl/protege#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>

@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="https://w3id.org/media/dma#"
      xml:base="https://w3id.org/media/dma"
      xmlns:schema="https://schema.org/"
-     xmlns:dpo="http://dbpedia.org/ontology/"
      xmlns:rdvocab="http://rdvocab.info/ElementsGr2/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
@@ -13,6 +12,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:purl="http://purl.org/ontology/po/"
      xmlns:edm="http://www.europeana.eu/schemas/edm#"
+     xmlns:dbo="http://dbpedia.org/ontology/"
      xmlns:dbp="http://dbpedia.org/property/"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -790,6 +790,18 @@ All rights reserved.</dbp:copyright>
     
 
 
+    <!-- http://dbpedia.org/ontology/price -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/price">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description">
@@ -825,42 +837,6 @@ All rights reserved.</dbp:copyright>
         <rdfs:domain rdf:resource="https://schema.org/Product"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
         <rdfs:label>issued</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://dbpedia.org/ontology/price -->
-
-    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/price">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label>price</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/media/dma#targetTitle -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#targetTitle">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>targetTitle</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/media/dma#targetType -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#targetType">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>targetType</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1860,6 +1836,30 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">It determines the object identifier of a linking extension.</rdfs:comment>
         <rdfs:label>targetId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#targetTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#targetTitle">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>targetTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/media/dma#targetType -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#targetType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#linkingExtensionDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/media/dma#LinkingExtension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>targetType</rdfs:label>
     </owl:DatatypeProperty>
     
 
