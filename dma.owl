@@ -1352,9 +1352,9 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     
 
 
-    <!-- https://w3id.org/media/dma#copyright -->
+    <!-- http://dbpedia.org/property/copyright -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#copyright">
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/property/copyright">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1479,7 +1479,7 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#extensionKey">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#genericExtensionDataProperty"/>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#ownerExtentionDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#ownerExtensionDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#GenericExtension"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#OwnerExtension"/>
@@ -1490,17 +1490,17 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     
 
 
-    <!-- https://w3id.org/media/dma#extentionValue -->
+    <!-- https://w3id.org/media/dma#extensionValue -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#extentionValue">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#extensionValue">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#genericExtensionDataProperty"/>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#ownerExtentionDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#ownerExtensionDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#GenericExtension"/>
         <rdfs:domain rdf:resource="https://w3id.org/media/dma#OwnerExtension"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">It defines a value as part of a hash element related to a key.  It collects generic information through key, value pairs.</rdfs:comment>
-        <rdfs:label>extentionValue</rdfs:label>
+        <rdfs:label>extensionValue</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1666,12 +1666,12 @@ Textual description of BIC Classification Subject Code(s) separated by pipes.</r
     
 
 
-    <!-- https://w3id.org/media/dma#ownerExtentionDataProperty -->
+    <!-- https://w3id.org/media/dma#ownerExtensionDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#ownerExtentionDataProperty">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/media/dma#ownerExtensionDataProperty">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/media/dma#assetDataProperty"/>
         <rdfs:comment xml:lang="en">This refers to a data property able to represent elements of an Asset that set  generic information about owner of this Asset.</rdfs:comment>
-        <rdfs:label>ownerExtentionDataProperty</rdfs:label>
+        <rdfs:label>ownerExtensionDataProperty</rdfs:label>
     </owl:DatatypeProperty>
     
 
