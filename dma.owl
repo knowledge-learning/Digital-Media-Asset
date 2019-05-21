@@ -31,8 +31,8 @@
         <ONTOLegolang_UAge:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</ONTOLegolang_UAge:numberOfClasses>
         <ONTOLegolang_UAge:numberOfObjectProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</ONTOLegolang_UAge:numberOfObjectProperties>
         <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-01T10:00:00</dcterms:dateCopyrighted>
-        <dbp:copyright rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © 2016 by Information Systems and Language Processing Workgroup
-All rights reserved.</dbp:copyright>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © 2016 by Information Systems and Language Processing Workgroup
+All rights reserved.</dc:rights>
         <dbp:contactInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ygutierrez[at]dlsi.ua.es, dtomas[at]dlsi.ua.es, imoreno[at]dlsi.ua.es, ameny[at]mail.ntua.gr, alps[at]mail.ntua.gr</dbp:contactInfo>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Media Asset</rdfs:label>
     </owl:Ontology>
@@ -70,9 +70,9 @@ All rights reserved.</dbp:copyright>
     
 
 
-    <!-- http://dbpedia.org/property/copyright -->
+    <!-- http://purl.org/dc/elements/1.1/rights -->
 
-    <owl:AnnotationProperty rdf:about="http://dbpedia.org/property/copyright"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
 
 
