@@ -35,8 +35,10 @@ This ontology aims to provide a web semantic standard for representing Digital M
 ## License
 Creative Commons Attribution 4.0 International License
 
-## Please cite this work using the following bibtext
 
+## How to cite
+
+Please cite this work with the following this BibTeX:
 ```
 @article{GUTIERREZ2019381,
 title = "Developing an ontology schema for enriching and linking digital media assets",
